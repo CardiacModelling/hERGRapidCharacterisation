@@ -1,0 +1,72 @@
+Nanion SyncroPatch Ephys Protocol  AP_clamp_Chon_1Hz4s
+Vers. 1.3
+
+Measurement Mode
+
+Modus  VC
+LFVC  T
+Gentle Switch  T
+
+General Settings
+
+V Membrane [mV]  -80
+# of Sweeps  2
+Sweep Interval [ms]  5000
+Sample Period [us]  100
+# of Samples  40000
+# of Leak Pulses  4
+Leak Amplitude [mv]  20
+Leak Duration [mv]  20
+Leak Delay [ms]  0
+Leak Data  T
+
+
+Ephys Settings 
+
+Type	Vmemb T/F	Voltage [mV]	Duration [ms]	Vincrease [mV]	RecordData T/F	Group	Rep
+Set 	T	  60.0	  50.0	   0.0	T	    -1	    -1
+Set 	F	  34.0	   3.0	   0.0	T	    -1	    -1
+Ramp	F	  30.0	   8.0	   0.0	T	    -1	    -1
+Ramp	F	  26.0	  15.2	   0.0	T	    -1	    -1
+Ramp	F	  -8.0	 183.6	   0.0	T	    -1	    -1
+Ramp	F	 -21.0	  39.0	   0.0	T	    -1	    -1
+Ramp	F	 -68.0	  70.5	   0.0	T	    -1	    -1
+Ramp	F	 -80.0	  25.2	   0.0	T	    -1	    -1
+Set 	T	 -80.0	 655.5	   0.0	T	    -1	    -1
+Set 	F	  34.0	   3.0	   0.0	T	    -1	    -1
+Ramp	F	  30.0	   8.0	   0.0	T	    -1	    -1
+Ramp	F	  26.0	  15.2	   0.0	T	    -1	    -1
+Ramp	F	  -8.0	 183.6	   0.0	T	    -1	    -1
+Ramp	F	 -21.0	  39.0	   0.0	T	    -1	    -1
+Ramp	F	 -68.0	  70.5	   0.0	T	    -1	    -1
+Ramp	F	 -80.0	  25.2	   0.0	T	    -1	    -1
+Set 	T	  50.0	 655.5	   0.0	T	    -1	    -1
+Set 	F	  34.0	   3.0	   0.0	T	    -1	    -1
+Ramp	F	  30.0	   8.0	   0.0	T	    -1	    -1
+Ramp	F	  26.0	  15.2	   0.0	T	    -1	    -1
+Ramp	F	  -8.0	 183.6	   0.0	T	    -1	    -1
+Ramp	F	 -21.0	  39.0	   0.0	T	    -1	    -1
+Ramp	F	 -68.0	  70.5	   0.0	T	    -1	    -1
+Ramp	F	 -80.0	  25.2	   0.0	T	    -1	    -1
+Set 	T	  50.0	 655.5	   0.0	T	    -1	    -1
+Set 	F	  34.0	   3.0	   0.0	T	    -1	    -1
+Ramp	F	  30.0	   8.0	   0.0	T	    -1	    -1
+Ramp	F	  26.0	  15.2	   0.0	T	    -1	    -1
+Ramp	F	  -8.0	 183.6	   0.0	T	    -1	    -1
+Ramp	F	 -21.0	  39.0	   0.0	T	    -1	    -1
+Ramp	F	 -68.0	  70.5	   0.0	T	    -1	    -1
+Ramp	F	 -80.0	  25.2	   0.0	T	    -1	    -1
+Set 	T	  50.0	 605.5	   0.0	T	    -1	    -1
+
+
+Online Analysis Settings Vers. 1.2
+
+Name	Type	X Axis	XCursor 1 [ms]	XCursor 2 [ms]	Y Analysis	Operand 1	Operator	Operand 2	Property
+C 1	Cursor	Time	50.1	333.0	Minimum	Ind  -1	 + 	Ind  -1	Seal Res.
+C 2	Cursor	Time	40.8	49.0	Minimum	Ind  -1	 + 	Ind  -1	Seal Res.
+P 1	Result	Time	232.0	278.0	Minimum	Ind  -1	 + 	Ind  -1	Seal Res.
+P 2	Result	Time	232.0	278.0	Minimum	Ind  -1	 + 	Ind  -1	Capacitance
+P 3	Result	Time	232.0	278.0	Minimum	Ind  -1	 + 	Ind  -1	Series Res
+F 1	Formula	Time	276.0	331.0	Minimum	Ind  1	 - 	Ind  0	Seal Res.
+
+
