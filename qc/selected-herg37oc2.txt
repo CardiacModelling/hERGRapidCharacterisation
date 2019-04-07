@@ -1,0 +1,3 @@
+# Based on QC on protocol 'whole' for each cell.
+J07
+L07
