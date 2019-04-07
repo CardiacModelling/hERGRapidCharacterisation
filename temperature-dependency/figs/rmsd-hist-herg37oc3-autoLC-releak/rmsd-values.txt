@@ -1,0 +1,373 @@
+Start logging...
+herg37oc3...
+staircaseramp...
+median herg37oc3 K06 rmsd: 0.119261821562
+75percent herg37oc3 M04 rmsd: 0.136117028252
+90percent herg37oc3 H21 rmsd: 0.169601922119
+worst herg37oc3 B16 rmsd: 0.212242164339
+best herg37oc3 C19 rmsd: 0.0912428373166
+---
+rank 00 herg37oc3 C19 rmsd: 0.0912428373166
+rank 01 herg37oc3 H24 rmsd: 0.0969335367718
+rank 02 herg37oc3 F23 rmsd: 0.0981883929393
+rank 03 herg37oc3 I07 rmsd: 0.101318937507
+rank 04 herg37oc3 O10 rmsd: 0.102844640443
+rank 05 herg37oc3 I21 rmsd: 0.103348915028
+rank 06 herg37oc3 I02 rmsd: 0.103611790834
+rank 07 herg37oc3 J08 rmsd: 0.104312046908
+rank 08 herg37oc3 E23 rmsd: 0.104825356222
+rank 09 herg37oc3 F01 rmsd: 0.10496263509
+rank 10 herg37oc3 J20 rmsd: 0.10496340763
+rank 11 herg37oc3 F22 rmsd: 0.105777243277
+rank 12 herg37oc3 D13 rmsd: 0.105801157129
+rank 13 herg37oc3 G19 rmsd: 0.107007274442
+rank 14 herg37oc3 P17 rmsd: 0.107428888478
+rank 15 herg37oc3 G10 rmsd: 0.107605275744
+rank 16 herg37oc3 E04 rmsd: 0.112180806351
+rank 17 herg37oc3 O11 rmsd: 0.113292329122
+rank 18 herg37oc3 N21 rmsd: 0.115415537288
+rank 19 herg37oc3 E11 rmsd: 0.118191080215
+rank 20 herg37oc3 J07 rmsd: 0.118192377333
+rank 21 herg37oc3 J03 rmsd: 0.118610107669
+rank 22 herg37oc3 K06 rmsd: 0.119261821562
+rank 23 herg37oc3 C09 rmsd: 0.120296841009
+rank 24 herg37oc3 K09 rmsd: 0.122132260277
+rank 25 herg37oc3 I14 rmsd: 0.122214268286
+rank 26 herg37oc3 F20 rmsd: 0.122648794098
+rank 27 herg37oc3 B11 rmsd: 0.126852213071
+rank 28 herg37oc3 C10 rmsd: 0.128137275076
+rank 29 herg37oc3 F12 rmsd: 0.129857772143
+rank 30 herg37oc3 E06 rmsd: 0.134722873447
+rank 31 herg37oc3 M17 rmsd: 0.134731244526
+rank 32 herg37oc3 F03 rmsd: 0.135865786344
+rank 33 herg37oc3 M04 rmsd: 0.136117028252
+rank 34 herg37oc3 B06 rmsd: 0.138420656647
+rank 35 herg37oc3 F07 rmsd: 0.138434896551
+rank 36 herg37oc3 D08 rmsd: 0.145941835698
+rank 37 herg37oc3 C23 rmsd: 0.147657433651
+rank 38 herg37oc3 F09 rmsd: 0.149424721567
+rank 39 herg37oc3 D16 rmsd: 0.158579734596
+rank 40 herg37oc3 H21 rmsd: 0.169601922119
+rank 41 herg37oc3 A03 rmsd: 0.178577334143
+rank 42 herg37oc3 I03 rmsd: 0.182938439422
+rank 43 herg37oc3 K07 rmsd: 0.204713538569
+rank 44 herg37oc3 B16 rmsd: 0.212242164339
+---
+pharma...
+median herg37oc3 G10 rmsd: 0.150825710936
+75percent herg37oc3 F01 rmsd: 0.192487310455
+90percent herg37oc3 C10 rmsd: 0.225587030325
+worst herg37oc3 B16 rmsd: 0.530987756625
+best herg37oc3 E04 rmsd: 0.0748483344893
+---
+rank 00 herg37oc3 E04 rmsd: 0.0748483344893
+rank 01 herg37oc3 J07 rmsd: 0.0752906853439
+rank 02 herg37oc3 F03 rmsd: 0.0844688235548
+rank 03 herg37oc3 C23 rmsd: 0.0848200489183
+rank 04 herg37oc3 M17 rmsd: 0.0949904602324
+rank 05 herg37oc3 K06 rmsd: 0.0955173686918
+rank 06 herg37oc3 O10 rmsd: 0.0994942219478
+rank 07 herg37oc3 J08 rmsd: 0.099927312803
+rank 08 herg37oc3 K09 rmsd: 0.100866021175
+rank 09 herg37oc3 J20 rmsd: 0.101163055001
+rank 10 herg37oc3 P17 rmsd: 0.108693315967
+rank 11 herg37oc3 E06 rmsd: 0.108877846179
+rank 12 herg37oc3 F09 rmsd: 0.118330807828
+rank 13 herg37oc3 O11 rmsd: 0.118436971411
+rank 14 herg37oc3 J03 rmsd: 0.122191272926
+rank 15 herg37oc3 E23 rmsd: 0.124676324502
+rank 16 herg37oc3 F22 rmsd: 0.126534194592
+rank 17 herg37oc3 M04 rmsd: 0.129979160661
+rank 18 herg37oc3 B06 rmsd: 0.133001521336
+rank 19 herg37oc3 N21 rmsd: 0.135076426548
+rank 20 herg37oc3 H21 rmsd: 0.138261415291
+rank 21 herg37oc3 K07 rmsd: 0.140938573277
+rank 22 herg37oc3 G10 rmsd: 0.150825710936
+rank 23 herg37oc3 C19 rmsd: 0.154472426071
+rank 24 herg37oc3 I07 rmsd: 0.164021929219
+rank 25 herg37oc3 F23 rmsd: 0.170606588227
+rank 26 herg37oc3 I21 rmsd: 0.181363586887
+rank 27 herg37oc3 H24 rmsd: 0.18230996074
+rank 28 herg37oc3 D08 rmsd: 0.182710054663
+rank 29 herg37oc3 F07 rmsd: 0.183943836404
+rank 30 herg37oc3 G19 rmsd: 0.187522248969
+rank 31 herg37oc3 I14 rmsd: 0.191074031701
+rank 32 herg37oc3 A03 rmsd: 0.191104995121
+rank 33 herg37oc3 F01 rmsd: 0.192487310455
+rank 34 herg37oc3 I02 rmsd: 0.194226125928
+rank 35 herg37oc3 I03 rmsd: 0.19637844303
+rank 36 herg37oc3 F12 rmsd: 0.1994700999
+rank 37 herg37oc3 D16 rmsd: 0.202817706305
+rank 38 herg37oc3 F20 rmsd: 0.202996160579
+rank 39 herg37oc3 D13 rmsd: 0.211197207005
+rank 40 herg37oc3 C10 rmsd: 0.225587030325
+rank 41 herg37oc3 E11 rmsd: 0.234350486012
+rank 42 herg37oc3 B11 rmsd: 0.240323325942
+rank 43 herg37oc3 C09 rmsd: 0.246008017958
+rank 44 herg37oc3 B16 rmsd: 0.530987756625
+---
+apab...
+median herg37oc3 G10 rmsd: 0.159189891872
+75percent herg37oc3 C09 rmsd: 0.189849503099
+90percent herg37oc3 I03 rmsd: 0.211956773666
+worst herg37oc3 B16 rmsd: 0.358405631535
+best herg37oc3 O10 rmsd: 0.117647534698
+---
+rank 00 herg37oc3 O10 rmsd: 0.117647534698
+rank 01 herg37oc3 G19 rmsd: 0.130855830069
+rank 02 herg37oc3 P17 rmsd: 0.132528905304
+rank 03 herg37oc3 E04 rmsd: 0.136609095054
+rank 04 herg37oc3 I02 rmsd: 0.143326316611
+rank 05 herg37oc3 F23 rmsd: 0.14387502549
+rank 06 herg37oc3 I07 rmsd: 0.144711083241
+rank 07 herg37oc3 M17 rmsd: 0.145700609201
+rank 08 herg37oc3 E23 rmsd: 0.146550372778
+rank 09 herg37oc3 J07 rmsd: 0.148926884202
+rank 10 herg37oc3 N21 rmsd: 0.149452092938
+rank 11 herg37oc3 F01 rmsd: 0.149504495187
+rank 12 herg37oc3 I21 rmsd: 0.149959933343
+rank 13 herg37oc3 J08 rmsd: 0.151810129899
+rank 14 herg37oc3 B06 rmsd: 0.153222614033
+rank 15 herg37oc3 F12 rmsd: 0.153481672171
+rank 16 herg37oc3 B11 rmsd: 0.154042168885
+rank 17 herg37oc3 O11 rmsd: 0.154311634912
+rank 18 herg37oc3 C10 rmsd: 0.154595877356
+rank 19 herg37oc3 C19 rmsd: 0.155360617741
+rank 20 herg37oc3 K09 rmsd: 0.157676649749
+rank 21 herg37oc3 K06 rmsd: 0.157694017162
+rank 22 herg37oc3 G10 rmsd: 0.159189891872
+rank 23 herg37oc3 H21 rmsd: 0.162604203728
+rank 24 herg37oc3 E06 rmsd: 0.165350836463
+rank 25 herg37oc3 D08 rmsd: 0.16560304089
+rank 26 herg37oc3 D13 rmsd: 0.167353336189
+rank 27 herg37oc3 F22 rmsd: 0.172433913848
+rank 28 herg37oc3 J03 rmsd: 0.17491452348
+rank 29 herg37oc3 F09 rmsd: 0.177367212434
+rank 30 herg37oc3 E11 rmsd: 0.177396768438
+rank 31 herg37oc3 H24 rmsd: 0.181548737317
+rank 32 herg37oc3 I14 rmsd: 0.18944053027
+rank 33 herg37oc3 C09 rmsd: 0.189849503099
+rank 34 herg37oc3 F03 rmsd: 0.198556283924
+rank 35 herg37oc3 J20 rmsd: 0.199553296583
+rank 36 herg37oc3 F07 rmsd: 0.200141814794
+rank 37 herg37oc3 F20 rmsd: 0.201494182371
+rank 38 herg37oc3 C23 rmsd: 0.204403761836
+rank 39 herg37oc3 M04 rmsd: 0.208589167377
+rank 40 herg37oc3 I03 rmsd: 0.211956773666
+rank 41 herg37oc3 K07 rmsd: 0.215720507314
+rank 42 herg37oc3 A03 rmsd: 0.223480478533
+rank 43 herg37oc3 D16 rmsd: 0.250870468369
+rank 44 herg37oc3 B16 rmsd: 0.358405631535
+---
+apabv3...
+median herg37oc3 N21 rmsd: 0.104503323364
+75percent herg37oc3 B06 rmsd: 0.121631308936
+90percent herg37oc3 F12 rmsd: 0.191467352452
+worst herg37oc3 K07 rmsd: 0.263106940003
+best herg37oc3 I02 rmsd: 0.0655621120973
+---
+rank 00 herg37oc3 I02 rmsd: 0.0655621120973
+rank 01 herg37oc3 O10 rmsd: 0.0682938041095
+rank 02 herg37oc3 E23 rmsd: 0.0753749572481
+rank 03 herg37oc3 P17 rmsd: 0.0760695774705
+rank 04 herg37oc3 I07 rmsd: 0.0800150445566
+rank 05 herg37oc3 G19 rmsd: 0.0802142767734
+rank 06 herg37oc3 F23 rmsd: 0.0825193188646
+rank 07 herg37oc3 J08 rmsd: 0.0825799482599
+rank 08 herg37oc3 C19 rmsd: 0.0878998697385
+rank 09 herg37oc3 J07 rmsd: 0.0893729630483
+rank 10 herg37oc3 C10 rmsd: 0.0909555614021
+rank 11 herg37oc3 E04 rmsd: 0.0918583745097
+rank 12 herg37oc3 M17 rmsd: 0.0941324947069
+rank 13 herg37oc3 G10 rmsd: 0.0952946483538
+rank 14 herg37oc3 I21 rmsd: 0.0964773194379
+rank 15 herg37oc3 K06 rmsd: 0.0977122625098
+rank 16 herg37oc3 F01 rmsd: 0.0985802129353
+rank 17 herg37oc3 E11 rmsd: 0.0986806894663
+rank 18 herg37oc3 F09 rmsd: 0.0988005902502
+rank 19 herg37oc3 H21 rmsd: 0.101708695177
+rank 20 herg37oc3 H24 rmsd: 0.103833257564
+rank 21 herg37oc3 E06 rmsd: 0.104373092701
+rank 22 herg37oc3 N21 rmsd: 0.104503323364
+rank 23 herg37oc3 F22 rmsd: 0.107562420677
+rank 24 herg37oc3 D13 rmsd: 0.108620953311
+rank 25 herg37oc3 I14 rmsd: 0.111486746557
+rank 26 herg37oc3 O11 rmsd: 0.114964042945
+rank 27 herg37oc3 J20 rmsd: 0.115081603195
+rank 28 herg37oc3 C09 rmsd: 0.115498229463
+rank 29 herg37oc3 J03 rmsd: 0.116819324008
+rank 30 herg37oc3 B11 rmsd: 0.120022235409
+rank 31 herg37oc3 F20 rmsd: 0.12099034263
+rank 32 herg37oc3 D08 rmsd: 0.121167432052
+rank 33 herg37oc3 B06 rmsd: 0.121631308936
+rank 34 herg37oc3 K09 rmsd: 0.126581891792
+rank 35 herg37oc3 F07 rmsd: 0.138391376772
+rank 36 herg37oc3 F03 rmsd: 0.152639808329
+rank 37 herg37oc3 I03 rmsd: 0.17457953169
+rank 38 herg37oc3 A03 rmsd: 0.182929778961
+rank 39 herg37oc3 M04 rmsd: 0.182935474123
+rank 40 herg37oc3 F12 rmsd: 0.191467352452
+rank 41 herg37oc3 C23 rmsd: 0.194672768318
+rank 42 herg37oc3 D16 rmsd: 0.251955132537
+rank 43 herg37oc3 B16 rmsd: 0.252520619333
+rank 44 herg37oc3 K07 rmsd: 0.263106940003
+---
+ap05hz...
+median herg37oc3 D13 rmsd: 0.171423428487
+75percent herg37oc3 M04 rmsd: 0.19918740684
+90percent herg37oc3 I03 rmsd: 0.255019244429
+worst herg37oc3 B16 rmsd: 0.376165331969
+best herg37oc3 P17 rmsd: 0.101415404114
+---
+rank 00 herg37oc3 P17 rmsd: 0.101415404114
+rank 01 herg37oc3 I02 rmsd: 0.114589004779
+rank 02 herg37oc3 G19 rmsd: 0.116487369649
+rank 03 herg37oc3 E23 rmsd: 0.117598107517
+rank 04 herg37oc3 B11 rmsd: 0.125092316188
+rank 05 herg37oc3 K06 rmsd: 0.130423833785
+rank 06 herg37oc3 N21 rmsd: 0.130829916629
+rank 07 herg37oc3 I07 rmsd: 0.130944630935
+rank 08 herg37oc3 F01 rmsd: 0.132976506894
+rank 09 herg37oc3 F23 rmsd: 0.13557622352
+rank 10 herg37oc3 J07 rmsd: 0.135612070332
+rank 11 herg37oc3 H24 rmsd: 0.137486241178
+rank 12 herg37oc3 D08 rmsd: 0.139408621406
+rank 13 herg37oc3 O11 rmsd: 0.141951785241
+rank 14 herg37oc3 E04 rmsd: 0.142584955784
+rank 15 herg37oc3 J20 rmsd: 0.147442860511
+rank 16 herg37oc3 I21 rmsd: 0.151455349992
+rank 17 herg37oc3 K09 rmsd: 0.153844729858
+rank 18 herg37oc3 J08 rmsd: 0.15388785754
+rank 19 herg37oc3 B06 rmsd: 0.156837161465
+rank 20 herg37oc3 G10 rmsd: 0.160707136514
+rank 21 herg37oc3 F22 rmsd: 0.167520047271
+rank 22 herg37oc3 D13 rmsd: 0.171423428487
+rank 23 herg37oc3 E06 rmsd: 0.174921672408
+rank 24 herg37oc3 O10 rmsd: 0.175404766629
+rank 25 herg37oc3 C10 rmsd: 0.175770052524
+rank 26 herg37oc3 E11 rmsd: 0.177134354882
+rank 27 herg37oc3 C19 rmsd: 0.180393767137
+rank 28 herg37oc3 H21 rmsd: 0.188365655933
+rank 29 herg37oc3 I14 rmsd: 0.188963798474
+rank 30 herg37oc3 J03 rmsd: 0.189155620513
+rank 31 herg37oc3 F03 rmsd: 0.193446925642
+rank 32 herg37oc3 F07 rmsd: 0.196392196924
+rank 33 herg37oc3 M04 rmsd: 0.19918740684
+rank 34 herg37oc3 F12 rmsd: 0.208280064491
+rank 35 herg37oc3 C09 rmsd: 0.210181881013
+rank 36 herg37oc3 F09 rmsd: 0.217951186036
+rank 37 herg37oc3 A03 rmsd: 0.228740985633
+rank 38 herg37oc3 K07 rmsd: 0.237458441266
+rank 39 herg37oc3 F20 rmsd: 0.237614528946
+rank 40 herg37oc3 I03 rmsd: 0.255019244429
+rank 41 herg37oc3 C23 rmsd: 0.258750818225
+rank 42 herg37oc3 M17 rmsd: 0.270542593363
+rank 43 herg37oc3 D16 rmsd: 0.326787209881
+rank 44 herg37oc3 B16 rmsd: 0.376165331969
+---
+ap1hz...
+median herg37oc3 B06 rmsd: 0.151820724441
+75percent herg37oc3 M04 rmsd: 0.203055088747
+90percent herg37oc3 C23 rmsd: 0.227670989657
+worst herg37oc3 B16 rmsd: 0.280342584309
+best herg37oc3 P17 rmsd: 0.104293190691
+---
+rank 00 herg37oc3 P17 rmsd: 0.104293190691
+rank 01 herg37oc3 E23 rmsd: 0.115799784949
+rank 02 herg37oc3 I02 rmsd: 0.1163997972
+rank 03 herg37oc3 O10 rmsd: 0.119537702729
+rank 04 herg37oc3 F01 rmsd: 0.121066928979
+rank 05 herg37oc3 G19 rmsd: 0.1250492676
+rank 06 herg37oc3 K06 rmsd: 0.12559747037
+rank 07 herg37oc3 J20 rmsd: 0.126439131038
+rank 08 herg37oc3 E04 rmsd: 0.129137189059
+rank 09 herg37oc3 N21 rmsd: 0.129925021553
+rank 10 herg37oc3 I07 rmsd: 0.130322426478
+rank 11 herg37oc3 M17 rmsd: 0.130927446134
+rank 12 herg37oc3 J07 rmsd: 0.131954564153
+rank 13 herg37oc3 F23 rmsd: 0.133149787474
+rank 14 herg37oc3 B11 rmsd: 0.137619502125
+rank 15 herg37oc3 F12 rmsd: 0.137641775224
+rank 16 herg37oc3 O11 rmsd: 0.137709360807
+rank 17 herg37oc3 D08 rmsd: 0.146890264029
+rank 18 herg37oc3 E06 rmsd: 0.147315006951
+rank 19 herg37oc3 K09 rmsd: 0.148700091018
+rank 20 herg37oc3 F07 rmsd: 0.151317592544
+rank 21 herg37oc3 I21 rmsd: 0.151428785562
+rank 22 herg37oc3 B06 rmsd: 0.151820724441
+rank 23 herg37oc3 H24 rmsd: 0.161137226118
+rank 24 herg37oc3 G10 rmsd: 0.163700463691
+rank 25 herg37oc3 D13 rmsd: 0.166285647116
+rank 26 herg37oc3 F22 rmsd: 0.168104851236
+rank 27 herg37oc3 J08 rmsd: 0.168616618539
+rank 28 herg37oc3 H21 rmsd: 0.170754963355
+rank 29 herg37oc3 E11 rmsd: 0.173666525811
+rank 30 herg37oc3 C10 rmsd: 0.181148966261
+rank 31 herg37oc3 J03 rmsd: 0.186588167325
+rank 32 herg37oc3 I14 rmsd: 0.1951526782
+rank 33 herg37oc3 M04 rmsd: 0.203055088747
+rank 34 herg37oc3 F09 rmsd: 0.205012843706
+rank 35 herg37oc3 C19 rmsd: 0.207378499749
+rank 36 herg37oc3 F03 rmsd: 0.212496234058
+rank 37 herg37oc3 I03 rmsd: 0.223347877778
+rank 38 herg37oc3 F20 rmsd: 0.226201448576
+rank 39 herg37oc3 A03 rmsd: 0.227051617669
+rank 40 herg37oc3 C23 rmsd: 0.227670989657
+rank 41 herg37oc3 K07 rmsd: 0.232075024241
+rank 42 herg37oc3 C09 rmsd: 0.237930069836
+rank 43 herg37oc3 D16 rmsd: 0.238198915158
+rank 44 herg37oc3 B16 rmsd: 0.280342584309
+---
+ap2hz...
+median herg37oc3 F12 rmsd: 0.167475680981
+75percent herg37oc3 K09 rmsd: 0.190978029348
+90percent herg37oc3 C23 rmsd: 0.219528296165
+worst herg37oc3 K07 rmsd: 0.275576219489
+best herg37oc3 P17 rmsd: 0.109167523543
+---
+rank 00 herg37oc3 P17 rmsd: 0.109167523543
+rank 01 herg37oc3 E23 rmsd: 0.117295619786
+rank 02 herg37oc3 G19 rmsd: 0.121189503601
+rank 03 herg37oc3 O10 rmsd: 0.121271525674
+rank 04 herg37oc3 I02 rmsd: 0.129046201135
+rank 05 herg37oc3 H24 rmsd: 0.130262735315
+rank 06 herg37oc3 C10 rmsd: 0.134234289898
+rank 07 herg37oc3 D08 rmsd: 0.134950425557
+rank 08 herg37oc3 M17 rmsd: 0.139727106721
+rank 09 herg37oc3 O11 rmsd: 0.14125880396
+rank 10 herg37oc3 F01 rmsd: 0.146351307099
+rank 11 herg37oc3 I07 rmsd: 0.146446398232
+rank 12 herg37oc3 F23 rmsd: 0.147109601992
+rank 13 herg37oc3 K06 rmsd: 0.147529396602
+rank 14 herg37oc3 E04 rmsd: 0.149484613642
+rank 15 herg37oc3 J20 rmsd: 0.151003454802
+rank 16 herg37oc3 J07 rmsd: 0.154823340093
+rank 17 herg37oc3 N21 rmsd: 0.155753869287
+rank 18 herg37oc3 I21 rmsd: 0.162445897078
+rank 19 herg37oc3 B11 rmsd: 0.162879287129
+rank 20 herg37oc3 H21 rmsd: 0.16352391962
+rank 21 herg37oc3 J08 rmsd: 0.163824447235
+rank 22 herg37oc3 F12 rmsd: 0.167475680981
+rank 23 herg37oc3 G10 rmsd: 0.167544680808
+rank 24 herg37oc3 B06 rmsd: 0.16858515918
+rank 25 herg37oc3 F22 rmsd: 0.170497373051
+rank 26 herg37oc3 B16 rmsd: 0.172477811489
+rank 27 herg37oc3 F07 rmsd: 0.17433866483
+rank 28 herg37oc3 E06 rmsd: 0.176316003178
+rank 29 herg37oc3 I14 rmsd: 0.178811868238
+rank 30 herg37oc3 D13 rmsd: 0.17919410621
+rank 31 herg37oc3 F20 rmsd: 0.182135304368
+rank 32 herg37oc3 F09 rmsd: 0.18677401224
+rank 33 herg37oc3 K09 rmsd: 0.190978029348
+rank 34 herg37oc3 C19 rmsd: 0.196220552422
+rank 35 herg37oc3 J03 rmsd: 0.201196429961
+rank 36 herg37oc3 E11 rmsd: 0.210407792118
+rank 37 herg37oc3 C09 rmsd: 0.210426606929
+rank 38 herg37oc3 M04 rmsd: 0.214786640921
+rank 39 herg37oc3 F03 rmsd: 0.216779912977
+rank 40 herg37oc3 C23 rmsd: 0.219528296165
+rank 41 herg37oc3 A03 rmsd: 0.238467165966
+rank 42 herg37oc3 D16 rmsd: 0.251654286844
+rank 43 herg37oc3 I03 rmsd: 0.260042317083
+rank 44 herg37oc3 K07 rmsd: 0.275576219489
+---

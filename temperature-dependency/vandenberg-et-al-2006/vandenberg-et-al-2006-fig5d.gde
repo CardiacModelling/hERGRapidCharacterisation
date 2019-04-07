@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<document major="2" name="document">
+	<image name="Image">
+		<variable name="path" value="/users/cholei/Downloads/vandenberg-et-al-2006-fig5d.png" vtype="path"/>
+	</image>
+	<axes name="Axes">
+		<axis name="x">
+			<variable name="label" value="x" vtype="str"/>
+			<refpoint name="ref1">
+				<variable name="x" value="0.23401937046" vtype="norm"/>
+				<variable name="y" value="0.855374592834" vtype="norm"/>
+				<variable name="value" value="-150.0" vtype="float"/>
+			</refpoint>
+			<refpoint name="ref2">
+				<variable name="x" value="0.829055690073" vtype="norm"/>
+				<variable name="y" value="0.857546145494" vtype="norm"/>
+				<variable name="value" value="50.0" vtype="float"/>
+			</refpoint>
+		</axis>
+		<axis name="y">
+			<variable name="label" value="y" vtype="str"/>
+			<refpoint name="ref1">
+				<variable name="x" value="0.195157384988" vtype="norm"/>
+				<variable name="y" value="0.83789359392" vtype="norm"/>
+				<variable name="value" value="0.0" vtype="float"/>
+			</refpoint>
+			<refpoint name="ref2">
+				<variable name="x" value="0.194552058111" vtype="norm"/>
+				<variable name="y" value="0.0783930510315" vtype="norm"/>
+				<variable name="value" value="1.0" vtype="float"/>
+			</refpoint>
+		</axis>
+	</axes>
+	<datasets name="Data">
+		<dataset name="Data set 1">
+			<variable name="label" value="14oc" vtype="str"/>
+			<variable name="spline" value="False" vtype="bool"/>
+			<variable name="segments" value="0" vtype="int"/>
+			<variable name="degree" value="3" vtype="int"/>
+			<variable name="penalty" value="3" vtype="int"/>
+			<variable name="smoothing" value="0.1" vtype="float"/>
+			<variable name="samples" value="100" vtype="int"/>
+			<datapoint name="point_1">
+				<variable name="x" value="0.240920096852" vtype="norm"/>
+				<variable name="y" value="0.14875135722" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_2">
+				<variable name="x" value="0.269975786925" vtype="norm"/>
+				<variable name="y" value="0.182410423453" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_3">
+				<variable name="x" value="0.300242130751" vtype="norm"/>
+				<variable name="y" value="0.225841476656" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_4">
+				<variable name="x" value="0.32808716707" vtype="norm"/>
+				<variable name="y" value="0.27904451683" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_5">
+				<variable name="x" value="0.357142857143" vtype="norm"/>
+				<variable name="y" value="0.349619978284" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_6">
+				<variable name="x" value="0.388014527845" vtype="norm"/>
+				<variable name="y" value="0.42562432139" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_7">
+				<variable name="x" value="0.417675544794" vtype="norm"/>
+				<variable name="y" value="0.499457111835" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_8">
+				<variable name="x" value="0.445520581114" vtype="norm"/>
+				<variable name="y" value="0.57111834962" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_9">
+				<variable name="x" value="0.476997578692" vtype="norm"/>
+				<variable name="y" value="0.636264929425" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_10">
+				<variable name="x" value="0.506053268765" vtype="norm"/>
+				<variable name="y" value="0.686210640608" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_11">
+				<variable name="x" value="0.535714285714" vtype="norm"/>
+				<variable name="y" value="0.732899022801" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_12">
+				<variable name="x" value="0.562953995157" vtype="norm"/>
+				<variable name="y" value="0.760043431053" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_13">
+				<variable name="x" value="0.593220338983" vtype="norm"/>
+				<variable name="y" value="0.785016286645" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_14">
+				<variable name="x" value="0.622881355932" vtype="norm"/>
+				<variable name="y" value="0.806731813246" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_15">
+				<variable name="x" value="0.653753026634" vtype="norm"/>
+				<variable name="y" value="0.815418023887" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_16">
+				<variable name="x" value="0.682203389831" vtype="norm"/>
+				<variable name="y" value="0.827361563518" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_17">
+				<variable name="x" value="0.71004842615" vtype="norm"/>
+				<variable name="y" value="0.830618892508" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_18">
+				<variable name="x" value="0.739104116223" vtype="norm"/>
+				<variable name="y" value="0.833876221498" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_19">
+				<variable name="x" value="0.768765133172" vtype="norm"/>
+				<variable name="y" value="0.836047774159" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_20">
+				<variable name="x" value="0.799636803874" vtype="norm"/>
+				<variable name="y" value="0.836047774159" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_21">
+				<variable name="x" value="0.829297820823" vtype="norm"/>
+				<variable name="y" value="0.836047774159" vtype="norm"/>
+			</datapoint>
+		</dataset>
+		<dataset name="Data set 2">
+			<variable name="label" value="22oc" vtype="str"/>
+			<variable name="spline" value="False" vtype="bool"/>
+			<variable name="segments" value="0" vtype="int"/>
+			<variable name="degree" value="3" vtype="int"/>
+			<variable name="penalty" value="3" vtype="int"/>
+			<variable name="smoothing" value="0.1" vtype="float"/>
+			<variable name="samples" value="100" vtype="int"/>
+			<datapoint name="point_1">
+				<variable name="x" value="0.239709443099" vtype="norm"/>
+				<variable name="y" value="0.129207383279" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_2">
+				<variable name="x" value="0.268765133172" vtype="norm"/>
+				<variable name="y" value="0.158523344191" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_3">
+				<variable name="x" value="0.300242130751" vtype="norm"/>
+				<variable name="y" value="0.199782844734" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_4">
+				<variable name="x" value="0.32808716707" vtype="norm"/>
+				<variable name="y" value="0.243213897937" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_5">
+				<variable name="x" value="0.357142857143" vtype="norm"/>
+				<variable name="y" value="0.298588490771" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_6">
+				<variable name="x" value="0.388014527845" vtype="norm"/>
+				<variable name="y" value="0.368078175896" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_7">
+				<variable name="x" value="0.415859564165" vtype="norm"/>
+				<variable name="y" value="0.439739413681" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_8">
+				<variable name="x" value="0.444309927361" vtype="norm"/>
+				<variable name="y" value="0.513572204126" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_9">
+				<variable name="x" value="0.475181598063" vtype="norm"/>
+				<variable name="y" value="0.585233441911" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_10">
+				<variable name="x" value="0.505447941889" vtype="norm"/>
+				<variable name="y" value="0.643865363735" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_11">
+				<variable name="x" value="0.535108958838" vtype="norm"/>
+				<variable name="y" value="0.694896851249" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_12">
+				<variable name="x" value="0.563559322034" vtype="norm"/>
+				<variable name="y" value="0.730727470141" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_13">
+				<variable name="x" value="0.593220338983" vtype="norm"/>
+				<variable name="y" value="0.764386536374" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_14">
+				<variable name="x" value="0.622881355932" vtype="norm"/>
+				<variable name="y" value="0.789359391965" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_15">
+				<variable name="x" value="0.651937046005" vtype="norm"/>
+				<variable name="y" value="0.806731813246" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_16">
+				<variable name="x" value="0.680387409201" vtype="norm"/>
+				<variable name="y" value="0.818675352877" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_17">
+				<variable name="x" value="0.71004842615" vtype="norm"/>
+				<variable name="y" value="0.825190010858" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_18">
+				<variable name="x" value="0.739104116223" vtype="norm"/>
+				<variable name="y" value="0.831704668838" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_19">
+				<variable name="x" value="0.768159806295" vtype="norm"/>
+				<variable name="y" value="0.834961997828" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_20">
+				<variable name="x" value="0.800242130751" vtype="norm"/>
+				<variable name="y" value="0.834961997828" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_21">
+				<variable name="x" value="0.829297820823" vtype="norm"/>
+				<variable name="y" value="0.836047774159" vtype="norm"/>
+			</datapoint>
+		</dataset>
+		<dataset name="Data set 3">
+			<variable name="label" value="32oc" vtype="str"/>
+			<variable name="spline" value="False" vtype="bool"/>
+			<variable name="segments" value="0" vtype="int"/>
+			<variable name="degree" value="3" vtype="int"/>
+			<variable name="penalty" value="3" vtype="int"/>
+			<variable name="smoothing" value="0.1" vtype="float"/>
+			<variable name="samples" value="100" vtype="int"/>
+			<datapoint name="point_1">
+				<variable name="x" value="0.239709443099" vtype="norm"/>
+				<variable name="y" value="0.111834961998" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_2">
+				<variable name="x" value="0.268765133172" vtype="norm"/>
+				<variable name="y" value="0.131378935939" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_3">
+				<variable name="x" value="0.300847457627" vtype="norm"/>
+				<variable name="y" value="0.154180238871" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_4">
+				<variable name="x" value="0.32808716707" vtype="norm"/>
+				<variable name="y" value="0.190010857763" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_5">
+				<variable name="x" value="0.357142857143" vtype="norm"/>
+				<variable name="y" value="0.238870792617" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_6">
+				<variable name="x" value="0.388014527845" vtype="norm"/>
+				<variable name="y" value="0.296416938111" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_7">
+				<variable name="x" value="0.415859564165" vtype="norm"/>
+				<variable name="y" value="0.363735070575" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_8">
+				<variable name="x" value="0.444915254237" vtype="norm"/>
+				<variable name="y" value="0.436482084691" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_9">
+				<variable name="x" value="0.475786924939" vtype="norm"/>
+				<variable name="y" value="0.513572204126" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_10">
+				<variable name="x" value="0.504842615012" vtype="norm"/>
+				<variable name="y" value="0.584147665581" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_11">
+				<variable name="x" value="0.535108958838" vtype="norm"/>
+				<variable name="y" value="0.646036916395" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_12">
+				<variable name="x" value="0.563559322034" vtype="norm"/>
+				<variable name="y" value="0.703583061889" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_13">
+				<variable name="x" value="0.59200968523" vtype="norm"/>
+				<variable name="y" value="0.737242128122" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_14">
+				<variable name="x" value="0.622881355932" vtype="norm"/>
+				<variable name="y" value="0.767643865364" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_15">
+				<variable name="x" value="0.650726392252" vtype="norm"/>
+				<variable name="y" value="0.789359391965" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_16">
+				<variable name="x" value="0.680992736077" vtype="norm"/>
+				<variable name="y" value="0.802388707926" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_17">
+				<variable name="x" value="0.71186440678" vtype="norm"/>
+				<variable name="y" value="0.812160694897" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_18">
+				<variable name="x" value="0.740314769976" vtype="norm"/>
+				<variable name="y" value="0.818675352877" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_19">
+				<variable name="x" value="0.769975786925" vtype="norm"/>
+				<variable name="y" value="0.825190010858" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_20">
+				<variable name="x" value="0.799636803874" vtype="norm"/>
+				<variable name="y" value="0.830618892508" vtype="norm"/>
+			</datapoint>
+			<datapoint name="point_21">
+				<variable name="x" value="0.829297820823" vtype="norm"/>
+				<variable name="y" value="0.833876221498" vtype="norm"/>
+			</datapoint>
+		</dataset>
+	</datasets>
+</document>
