@@ -1,0 +1,59 @@
+A17  # V3 a bit odd
+B05  # low current and V4 looks wrong
+B06  # weird, maybe cell on and off?
+B11  # not recording V2 and V3
+B17  # not recording V2 and V3
+B19  # not recording V3
+B21  # not recording V3
+C06  # low SNR
+C07  # SNR too low
+C09  # SNR too low
+C10  # SNR too low
+C23  # SNR too low
+D02  # SNR too low
+D05  # weird V4
+D06  # SNR too low
+D08  # not recording V3
+E03  # not recording validations
+E15  # not recording V3
+E16  # not recording V3
+F16  # SNR too low
+F18  # not recording V3
+G07  # low SNR
+G11  # something went wrong?
+G13  # odd V1
+H03  # weird noise...?
+H10  # not recording V3
+H11  # not recording V3
+H13  # low SNR
+I13  # something went wrong?
+I14  # not recording validations
+I17  # not recording validations
+I19  # not recording validations
+I21  # not recording validations
+J01  # not recording validations
+J05  # low SNR
+J12  # not recording V3 and V4
+J22  # not recording validations
+J23  # not recording validations
+J24  # not recording V3 and V4
+K01 # not recording V3 and V4
+K04  # low SNR
+K13  # leaky V4 and V5
+K15  # not recording validations
+L01  # low SNR
+L22  # low SNR
+M05  # not recording V2 and V3
+M08  # not recording validations
+M22  # not recording validations
+N09  # not recording V3
+N15  # low SNR
+N21  # leaky V4?
+O03  # not recording V3
+O06  # not recording validations
+P08  # not recording V2 and V3
+P09  # not recording validations
+P11  # low SNR
+P16  # something went wrong?
+P19  # low SNR
+P22  # not recording validations
