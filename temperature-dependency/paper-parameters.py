@@ -292,7 +292,7 @@ if plot_kylie_param:
 # Done
 # axes[0, 0].legend()
 plt.tight_layout(pad=0.4, w_pad=0.5, h_pad=1.0)
-plt.subplots_adjust(hspace=0.125)
+plt.subplots_adjust(hspace=0.175)
 
 plt.savefig('%s/parameters-%s.png' % (savedir, plot_axes), dpi=200,
         bbox_iches='tight')

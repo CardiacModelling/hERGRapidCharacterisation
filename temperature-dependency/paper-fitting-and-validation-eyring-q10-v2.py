@@ -491,10 +491,10 @@ for i_T, (file_name, T) in enumerate(zip(file_list_tmp, temperatures)):
                                           *protocol_iv_args[prt]())
         axes[ai, aj].plot(iv_v, iv_i / np.max(iv_i), lw=1, alpha=1,
                           ls='-', c='C1', zorder=1,
-                          label='simplied pseudo-HBM mean')
+                          label='HBM mean')
     else:
         axes[ai, aj].plot(times_sim, simulation / norm_sim, alpha=1, lw=1,
-                ls='-', c='C1', zorder=1, label='simplied pseudo-HBM mean')
+                ls='-', c='C1', zorder=1, label='HBM mean')
 
     # Eyring
     if prt in protocol_iv:

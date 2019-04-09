@@ -628,8 +628,8 @@ if plot_g:
     # Eyring interception B = d = D
     #     ---> D = (Eyring interception B)
     q10_rowlabel = [r'$k_1$', r'$k_2$', r'$k_3$', r'$k_4$']
-    q10_collabel = [r'$Q_{10}$', r'$A$ (s$^{-1}$)',
-                    r'$B$ (V$^{-1}$)', r'$T_{ref}$ (K)']
+    q10_collabel = [r'$Q_{10}$', r'$\alpha$ (s$^{-1}$)',
+                    r'$\beta$ (V$^{-1}$)'] #, r'$T_{ref}$ (K)']
     # Q10 a = \ln(Q10) / 10oC
     #     ---> Q10 = \exp( 10oC * (Q10 a) )
     # Q10 c = \ln(A) - \ln(Q10) * T_{ref} / 10oC
@@ -663,15 +663,15 @@ if plot_g:
         B = q10_b
         q10_rows.append([float('%.6g' % Q10),
                          float('%.6g' % A),
-                         float('%.6g' % B),
-                         float('%.6g' % T_ref)])
+                         float('%.6g' % B),])
+                         # float('%.6g' % T_ref)])
 
     # The table
     eyring_table = axes[2, 0].table(cellText=eyring_rows,
                                     rowLabels=eyring_rowlabel,
                                     colLabels=eyring_collabel,
                                     clip_on=False,
-                                    bbox=(1.2, -0.15, 1.6, 0.85),
+                                    bbox=(1.2, -0.15, 1.7, 0.85),
                                     transform=axes[2, 0].transAxes)
     eyring_table.auto_set_font_size(False)
     eyring_table.set_fontsize(12)
@@ -680,7 +680,7 @@ if plot_g:
                                  rowLabels=q10_rowlabel,
                                  colLabels=q10_collabel,
                                  clip_on=False,
-                                 bbox=(3.05, -0.15, 1.4, 0.85),
+                                 bbox=(3.2, -0.15, 1.2, 0.85),
                                  transform=axes[2, 0].transAxes)
     q10_table.auto_set_font_size(False)
     q10_table.set_fontsize(12)
@@ -689,7 +689,7 @@ if plot_g:
 # Done
 axes[0, 0].legend()
 plt.tight_layout(pad=0.4, w_pad=0.5, h_pad=1.0)
-plt.subplots_adjust(hspace=0.125)
+plt.subplots_adjust(hspace=0.175)
 
 plt.savefig('%s/eyring-q10-fit-%s.png' % (savedir, plot_axes), dpi=200,
         bbox_iches='tight')
