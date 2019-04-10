@@ -107,8 +107,8 @@ norm_method = 1
 #
 # Do a very very tailored version........ :(
 #
-fig = plt.figure(figsize=(18, 20))
-bigygap = 4
+fig = plt.figure(figsize=(18, 18))
+bigygap = 5
 n_ygrid = 34
 n_subpanels = 1 + len(temperatures)
 grid = plt.GridSpec(3 * n_ygrid + 2 * bigygap, 3, hspace=0.0, wspace=0.2)
@@ -172,11 +172,13 @@ for i in range(3):
     axes[ii, 0].set_ylabel('Voltage\n[mV]', fontsize=14)
     for j, T_oC in enumerate(Ts_oC):
         j = j + 1
-        axes[ii + j, 0].set_ylabel('$%s\pm1^\circ$C' % int(T_oC), fontsize=14)
+        axes[ii + j, 0].set_ylabel('$%s^\circ$C' % int(T_oC), fontsize=14)
     axes[ii + 3, 0].text(-0.175, 0.5, 'Normalised currents', fontsize=18,
             rotation=90, ha='center', va='center',
             transform=axes[ii + 3, 0].transAxes)
+axes[n_subpanels - 1, 0].set_xlabel('Time [s]', fontsize=14)
 for i in range(int(len(protocol_list) / 3)):
+    axes[-(n_subpanels + 1), i].set_xlabel('Time [s]', fontsize=14)
     axes[-1, i].set_xlabel('Time [s]', fontsize=18)
 
 # Liudmila suggested common y-axis
@@ -259,9 +261,10 @@ for i_prt, prt in enumerate(protocol_list):
 
     # Title
     if prt == 'staircaseramp':
-        axes[ai, aj].set_title('Calibration', fontsize=16)
+        axes[ai, aj].set_title('Calibration', fontsize=16, loc='left')
     else:
-        axes[ai, aj].set_title('Validation %s' % i_prt, fontsize=16)
+        axes[ai, aj].set_title('Validation %s' % i_prt, fontsize=16,
+                loc='left')
 
     # Time point
     times = np.loadtxt('%s/%s-%s-times.csv' % (data_dir, file_name,
@@ -329,7 +332,6 @@ for i_prt, prt in enumerate(protocol_list):
             for l in f:
                 if not l.startswith('#'):
                     RANKED_CELLS.append(l.split()[0])
-        # RANKED_CELLS = RANKED_CELLS[:30]  # TODO remove
         # colour_list = sns.cubehelix_palette(len(SORTED_CELLS))
         colour_list = sns.color_palette('Blues_d', n_colors=len(RANKED_CELLS))
         colour_list = colour_list.as_hex()[::-1]

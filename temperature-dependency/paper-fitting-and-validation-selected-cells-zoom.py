@@ -256,6 +256,18 @@ axes[8, 0].set_ylabel('Model', fontsize=14)
 axes[9, 0].set_ylabel('Data', fontsize=14)
 axes[10, 0][0].set_ylabel('Zoom\nmodel', fontsize=14)
 axes[11, 0][0].set_ylabel('Zoom\ndata', fontsize=14)
+axes[3, 0][1].text(1, -0.5,
+        'Time [s]', fontsize=14, ha='center', va='center',
+        transform=axes[3, 0][1].transAxes)
+axes[-5, 0][0].text(1, -0.5,
+        'Time [s]', fontsize=14, ha='center', va='center',
+        transform=axes[-5, 0][0].transAxes)
+axes[-5, 1][0].text(1, -0.5,
+        'Time [s]', fontsize=14, ha='center', va='center',
+        transform=axes[-5, 1][0].transAxes)
+axes[-5, 2][0].text(0.5, -0.5,
+        'Time [s]', fontsize=14, ha='center', va='center',
+        transform=axes[-5, 2][0].transAxes)
 axes[-1, 0][0].text(1, -0.55,
         'Time [s]', fontsize=18, ha='center', va='center',
         transform=axes[-1, 0][0].transAxes)
@@ -322,9 +334,10 @@ for i_prt, prt in enumerate(protocol_list):
 
     # Title
     if prt == 'staircaseramp':
-        axes[ai, aj].set_title('Calibration', fontsize=16)
+        axes[ai, aj].set_title('Calibration', fontsize=16, loc='left')
     else:
-        axes[ai, aj].set_title('Validation %s' % i_prt, fontsize=16)
+        axes[ai, aj].set_title('Validation %s' % i_prt, fontsize=16,
+                loc='left')
 
     # Add label!
     if prt not in protocol_iv:

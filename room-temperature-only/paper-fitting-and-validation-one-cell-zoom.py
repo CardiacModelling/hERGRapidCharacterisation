@@ -124,7 +124,7 @@ fig = plt.figure(figsize=(16, 15))
 n_maxzoom = 7
 bigxgap = 12
 n_xgrid = n_maxzoom * 6 * 2
-bigygap = 3
+bigygap = 4
 n_ygrid = 19
 grid = plt.GridSpec(3 * n_ygrid + 2 * bigygap, 3 * n_xgrid + 2 * bigxgap,
                     hspace=0.0, wspace=0.0)
@@ -141,8 +141,8 @@ for i in range(int(len(protocol_list) / 3)):
         axes[1, i] = fig.add_subplot(grid[4:11, i_grid:f_grid])
         axes[2, i] = np.empty(n_maxzoom, dtype=object)  # grid[13:19, _])
     else:
-        axes[0, i] = fig.add_subplot(grid[0:6, i_grid:f_grid])
-        axes[1, i] = fig.add_subplot(grid[9:17, i_grid:f_grid])
+        axes[0, i] = fig.add_subplot(grid[0:7, i_grid:f_grid])
+        axes[1, i] = fig.add_subplot(grid[10:19, i_grid:f_grid])
 
     # Second 'row'
     n_shift = n_ygrid + bigygap
@@ -215,6 +215,18 @@ axes[5, 0][0].set_ylabel('Zoom in', fontsize=14)
 axes[6, 0].set_ylabel('Voltage\n[mV]', fontsize=14)
 axes[7, 0].set_ylabel('Current\n[pA]', fontsize=14)
 axes[8, 0][0].set_ylabel('Zoom in', fontsize=14)
+axes[2, 0][1].text(1, -0.3,
+        'Time [s]', fontsize=14, ha='center', va='center',
+        transform=axes[2, 0][1].transAxes)
+axes[-4, 0][0].text(1, -0.3,
+        'Time [s]', fontsize=14, ha='center', va='center',
+        transform=axes[-4, 0][0].transAxes)
+axes[-4, 1][0].text(1, -0.3,
+        'Time [s]', fontsize=14, ha='center', va='center',
+        transform=axes[-4, 1][0].transAxes)
+axes[-4, 2][0].text(0.5, -0.3,
+        'Time [s]', fontsize=14, ha='center', va='center',
+        transform=axes[-4, 2][0].transAxes)
 axes[-1, 0][0].text(1, -0.35,
         'Time [s]', fontsize=18, ha='center', va='center',
         transform=axes[-1, 0][0].transAxes)
@@ -271,9 +283,10 @@ for i_prt, prt in enumerate(protocol_list):
 
     # Title
     if prt == 'staircaseramp':
-        axes[ai, aj].set_title('Calibration', fontsize=16)
+        axes[ai, aj].set_title('Calibration', fontsize=16, loc='left')
     else:
-        axes[ai, aj].set_title('Validation %s' % i_prt, fontsize=16)
+        axes[ai, aj].set_title('Validation %s' % i_prt, fontsize=16,
+                loc='left')
 
     # Add label!
     if prt not in protocol_iv:

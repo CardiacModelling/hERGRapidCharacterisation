@@ -146,7 +146,9 @@ axes[5, 0].set_ylabel('Normalised\ncurrents', fontsize=14)
 axes[6, 0].set_ylabel('Voltage\n[mV]', fontsize=14)
 axes[7, 0].set_ylabel('Representative\ncurrent [pA]', fontsize=14)
 axes[8, 0].set_ylabel('Normalised\ncurrents', fontsize=14)
+axes[2, 0].set_xlabel('Time [s]', fontsize=16)
 for i in range(int(len(protocol_list) / 3)):
+    axes[-4, i].set_xlabel('Time [s]', fontsize=16)
     axes[-1, i].set_xlabel('Time [s]', fontsize=18)
 
 # Liudmila suggested common y-axis
@@ -189,9 +191,7 @@ for i_prt, prt in enumerate(protocol_list):
 
 # Add special x,y-label for IV protocols
 for ai in [1, 2]:
-    for aj in [1, 2]:
-        axes[ai, aj].text(0.98, 0.02, 'Voltage [mV]', fontsize=14, ha='right',
-                va='bottom', transform=axes[ai, aj].transAxes)
+    axes[2, ai].set_xlabel('Voltage [mV]', fontsize=16)
 # change y-label to right
 for aj in [1, 2]:
     axes[1, aj].yaxis.tick_right()
@@ -238,9 +238,10 @@ for i_prt, prt in enumerate(protocol_list):
 
     # Title
     if prt == 'staircaseramp':
-        axes[ai, aj].set_title('Calibration', fontsize=16)
+        axes[ai, aj].set_title('Calibration', fontsize=16, loc='left')
     else:
-        axes[ai, aj].set_title('Validation %s' % i_prt, fontsize=16)
+        axes[ai, aj].set_title('Validation %s' % i_prt, fontsize=16,
+                loc='left')
 
     # Time point
     times = np.loadtxt('%s/%s-%s-times.csv' % (data_dir, file_name,
