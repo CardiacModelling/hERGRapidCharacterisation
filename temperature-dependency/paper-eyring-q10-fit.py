@@ -129,9 +129,9 @@ for i, p_i in enumerate(param_A):
     axes[0, i].set_title(labels[p_i], loc='left', fontsize=16)
 
 if plot_axes == 'normal_axes':
-    axes[1, 0].set_ylabel(r'B [V$^{-1}$]', fontsize=16)
+    axes[1, 0].set_ylabel(r'|B| [V$^{-1}$]', fontsize=16)
 elif plot_axes == 'Eyring_axes':
-    axes[1, 0].set_ylabel(r'B [V$^{-1}$]', fontsize=16)
+    axes[1, 0].set_ylabel(r'|B| [V$^{-1}$]', fontsize=16)
 
 for i, p_i in enumerate(param_B):
     if not plot_g:
@@ -643,11 +643,14 @@ if plot_g:
     e = 1.6021766208E-19  # C
     eyring_rows = []
     q10_rows = []
-    for pa, pb in zip(param_A, param_B):
+    for i_k, (pa, pb) in enumerate(zip(param_A, param_B)):
         ey_m_A, ey_c_A = eyring_param_mean[pa]
         DH = -1 * ey_m_A * R  # * k_B
         DS = (ey_c_A - np.log(k_B / h)) * R  # * k_B
-        ey_m_B, ey_c_B = eyring_param_mean[pb]
+        if i_k % 2:
+            ey_m_B, ey_c_B = -1 * eyring_param_mean[pb]
+        else:
+            ey_m_B, ey_c_B = eyring_param_mean[pb]
         ze = ey_m_B * k_B / e
         D = ey_c_B
         eyring_rows.append([float('%.6g' % DS),
@@ -660,7 +663,10 @@ if plot_g:
         Q10 = np.exp(10.0 * q10_a)
         A = np.exp(q10_c + q10_a * T_ref)
         q10_b, _ = q10_param_mean[pb]
-        B = q10_b
+        if i_k % 2:
+            B = -1 * q10_b
+        else:
+            B = q10_b
         q10_rows.append([float('%.6g' % Q10),
                          float('%.6g' % A),
                          float('%.6g' % B),])

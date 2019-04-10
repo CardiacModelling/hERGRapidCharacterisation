@@ -54,7 +54,7 @@ axes[1].plot(1. / T_plot, simpleeyringB(1. / T_plot, *pB_eyring), ls='--',
 axes[1].plot(1. / T_plot, q10B(1. / T_plot, *pB_q10), ls=':',
         label=r'Q$_{10}$')
 
-axes[1].set_ylabel(r'B [V$^{-1}$]', fontsize=12)
+axes[1].set_ylabel(r'|B| [V$^{-1}$]', fontsize=12)
 axes[1].set_xlabel(r'T$^{-1}$ [K$^{-1}$]', fontsize=12)
 
 # Draw box

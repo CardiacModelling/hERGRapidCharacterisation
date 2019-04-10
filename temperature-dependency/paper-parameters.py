@@ -90,9 +90,9 @@ for i, p_i in enumerate(param_A):
     axes[0, i].set_title(labels[p_i], loc='left', fontsize=16)
 
 if plot_axes == 'normal_axes':
-    axes[1, 0].set_ylabel(r'B [V$^{-1}$]', fontsize=16)
+    axes[1, 0].set_ylabel(r'|B| [V$^{-1}$]', fontsize=16)
 elif plot_axes == 'Eyring_axes':
-    axes[1, 0].set_ylabel(r'B [V$^{-1}$]', fontsize=16)
+    axes[1, 0].set_ylabel(r'|B| [V$^{-1}$]', fontsize=16)
 
 for i, p_i in enumerate(param_B):
     if not plot_g:
