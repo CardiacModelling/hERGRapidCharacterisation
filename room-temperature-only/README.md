@@ -10,7 +10,7 @@ All scripts under "Paper figures" should reproduce all figures in the publicatio
 - myokit ([Myokit](http://myokit.org/))
 - pints ([Pints](https://github.com/pints-team/pints))
 
-Above libraries should be included/installed in [../lib/](../lib).
+Above libraries should be installed/included in [../lib/](../lib).
 
 
 ## Description

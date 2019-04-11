@@ -1,8 +1,9 @@
 # Libraries
 
-For Python, it requires
+For the code, it requires
 - myokit ([Myokit](http://myokit.org/))
 - pints ([Pints](https://github.com/pints-team/pints))
+- matplotlib ([Matplotlib](https://pypi.org/project/matplotlib/))
 
 # Methods
 

@@ -1,15 +1,21 @@
-# hERGRapidCharacterisation
+# Rapid characterisation of hERG channel kinetics
 
-Rapid characterisation of hERG potassium channel kinetics using the staircase protocol.
+This repository contains all data, code and figures for the papers "Rapid characterisation of hERG channel kinetics I: using an automated high-throughput system" and "Rapid characterisation of hERG channel kinetics II: temperature dependence".
 
 
 ### Main results
 
-[room-temperature-only](./room-temperature-only): Results of *Rapid characterisation of hERG potassium channel kinetics I: using an automated high-throughput system*
+[room-temperature-only](./room-temperature-only): Results of *Rapid characterisation of hERG channel kinetics I: using an automated high-throughput system*
 
-[temperature-dependency](./temperature-dependency): Results of *Rapid characterisation of hERG potassium channel kinetics II: temperature dependence*
+[temperature-dependency](./temperature-dependency): Results of *Rapid characterisation of hERG channel kinetics II: temperature dependence*
 
-[syn-room-temperature-only](./syn-room-temperature-only): Synthetic data studies supporting *Rapid characterisation of hERG potassium channel kinetics I: using an automated high-throughput system*
+[syn-room-temperature-only](./syn-room-temperature-only): Synthetic data studies supporting *Rapid characterisation of hERG channel kinetics I: using an automated high-throughput system*
+
+
+### Code
+
+The code requires Python 2.7 and two dependencies: [PINTS](https://github.com/pints-team/pints) and [Myokit](http://myokit.org).
+[Matplotlib](https://pypi.org/project/matplotlib/) is required to regenerate the figures, and one of the figures also requires [Seaborn](https://pypi.org/project/seaborn/).
 
 
 ### Supporting files
