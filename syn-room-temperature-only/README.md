@@ -2,6 +2,8 @@
 
 Synthetic data studies for hERG kinetics at room temperature.
 
+To reproduce the results in the supporting materials in the publication, run the scripts in the order as listed.
+
 
 ## Requirements
 
