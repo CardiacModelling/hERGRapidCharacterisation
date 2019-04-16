@@ -43,4 +43,12 @@ The code requires Python 2.7 and two dependencies: [PINTS](https://github.com/pi
 
 If you publish any work based on the contents of this repository please cite:
 
-*TBU*
+Lei, C. L., Clerx, M., Gavaghan, D. J., Polonchuk, L., Mirams, G. R., Wang, K.
+(2019).
+[Rapid characterisation of hERG channel kinetics I: using an automated high-throughput system](https://doi.org/10.1101/609727).
+_bioRxiv_, 609727.
+
+Lei, C. L., Clerx, M., Beattie, K. A., Melgari, D., Hancox, J., Gavaghan, D. J., Polonchuk, L., Mirams, G. R., Wang, K.
+(2019).
+[Rapid characterisation of hERG channel kinetics II: temperature dependence](https://doi.org/10.1101/609719).
+_bioRxiv_, 609719.
