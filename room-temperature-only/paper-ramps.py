@@ -215,6 +215,7 @@ pyplot_axes.add_patch(pathpatch2)
 # Done
 grid.tight_layout(fig, pad=0.6, rect=(0, 0, 1, 1))
 grid.update(wspace=0.0, hspace=0.0)
+plt.savefig('%s/ramps.png' % savedir, bbox_inch='tight', dpi=300)
 plt.savefig('%s/ramps.pdf' % savedir, format='pdf', bbox_inch='tight')
 plt.close()
 
