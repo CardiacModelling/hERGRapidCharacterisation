@@ -47,8 +47,8 @@ protocol_funcs = {
     'ap05hz': 'protocol-ap05hz.csv',
     'ap1hz': 'protocol-ap1hz.csv',
     'ap2hz': 'protocol-ap2hz.csv',
-    'sactiv': None,
-    'sinactiv': None,
+    'sactiv': protocols.sactiv,
+    'sinactiv': protocols.sinactiv,
 }
 protocol_dir = '../protocol-time-series'
 protocol_list = [
@@ -59,13 +59,32 @@ protocol_list = [
         'ap05hz',
         'ap1hz',
         'ap2hz',
+        'sactiv',
+        'sinactiv',
         ]
-prt_names = ['Staircase', 'pharma', 'EAD', 'DAD', 'AP05Hz', 'AP1Hz', 'AP2Hz']
+prt_names = ['Staircase', 'pharma', 'EAD', 'DAD', 'AP05Hz', 'AP1Hz', 'AP2Hz', 'actIV', 'inactIV']
 
+# IV protocol special treatment
 protocol_iv = [
     'sactiv',
     'sinactiv',
 ]
+protocol_iv_times = {
+    'sactiv': protocols.sactiv_times,
+    'sinactiv': protocols.sinactiv_times,
+}
+protocol_iv_convert = {
+    'sactiv': protocols.sactiv_convert,
+    'sinactiv': protocols.sinactiv_convert,
+}
+protocol_iv_args = {
+    'sactiv': protocols.sactiv_iv_arg,
+    'sinactiv': protocols.sinactiv_iv_arg,
+}
+protocol_iv_v = {
+    'sactiv': protocols.sactiv_v,
+    'sinactiv': protocols.sinactiv_v,
+}
 
 data_dir = '../data-autoLC'
 data_dir_staircase = '../data'
@@ -128,7 +147,14 @@ for i_temperature, (file_name, temperature) in enumerate(zip(file_list,
                 prt), delimiter=',', skiprows=1)
 
         # Voltage protocol
-        voltage = model.voltage(times)
+        if prt not in protocol_iv:
+            times_sim = np.copy(times)
+            voltage = model.voltage(times)
+        else:
+            times_sim = protocol_iv_times[prt](times[1] - times[0])
+            voltage = model.voltage(times_sim) * 1000
+            voltage, t = protocol_iv_convert[prt](voltage, times_sim)
+            assert(np.mean(np.abs(t - times)) < 1e-8)
 
         # Initialisation
         i = 0
@@ -154,24 +180,50 @@ for i_temperature, (file_name, temperature) in enumerate(zip(file_list,
                 g_releak = fmin(score_leak, [0.0], args=(data, voltage, times,
                         protocol_leak_check[prt]), disp=False)
                 data = I_releak(g_releak[0], data, voltage)
-            assert(data.shape == times.shape)
+            else:
+                data = np.loadtxt('%s/%s-%s-%s.csv' % (data_dir, file_name,
+                        prt, cell), delimiter=',', skiprows=1)
+                for i in range(data.shape[1]):
+                    g_releak = fmin(score_leak, [0.0], args=(data[:, i],
+                                        voltage[:, i], times,
+                                        protocol_leak_check[prt]), disp=False)
+                    data[:, i] = I_releak(g_releak[0], data[:, i], voltage[:, i])
+            assert(len(data) == len(times))
 
             # Simulation
-            simulation = model.simulate(obtained_parameters, times)
+            simulation = model.simulate(obtained_parameters, times_sim)
             if False:
                 for _ in range(5):
                     assert(all(simulation == 
-                        model.simulate(obtained_parameters, times)))
+                        model.simulate(obtained_parameters, times_sim)))
+            if prt in protocol_iv:
+                simulation, t = protocol_iv_convert[prt](simulation, times_sim)
+                assert(np.mean(np.abs(t - times)) < 1e-8)
+                iv_v = protocol_iv_v[prt]() * 1000  # mV
+                # simulation
+                iv_i_s = protocols.get_corrected_iv(simulation, times,
+                                                    *protocol_iv_args[prt]())
+                # recording
+                iv_i_d = protocols.get_corrected_iv(data, times,
+                                                    *protocol_iv_args[prt]())
+                # normalise and replace 'simulation', 'data', and 'times'
+                simulation = iv_i_s / np.max(iv_i_s)
+                data = iv_i_d / np.max(iv_i_d)
 
             RMSD.append(rmsd(simulation, data))
             RMSD_cells.append((file_name, cell))
             VALUES.append(data)
             SIMS.append(simulation)
             if i == 0 and debug:
-                plt.plot(times, data)
-                plt.plot(times, simulation)
+                if prt not in protocol_iv:
+                    plot_x = np.copy(times)
+                    plt.xlabel('Time')
+                else:
+                    plot_x = np.copy(iv_v)
+                    plt.xlabel('Voltage')
+                plt.plot(plot_x, data)
+                plt.plot(plot_x, simulation)
                 plt.ylabel('Current')
-                plt.xlabel('Time')
                 print('Debug rmsd: ' + str(rmsd(simulation, data)))
                 plt.savefig('%s/rmsd-hist-%s-debug.png' % (savepath, prt))
                 plt.close('all')
@@ -211,10 +263,15 @@ for i_temperature, (file_name, temperature) in enumerate(zip(file_list,
             ID, CELL = RMSD_cells[i][0], RMSD_cells[i][1]
             values = VALUES[i]
             sim = SIMS[i]
-            plt.plot(times, values)
-            plt.plot(times, sim)
+            if prt not in protocol_iv:
+                plot_x = np.copy(times)
+                plt.xlabel('Time')
+            else:
+                plot_x = np.copy(iv_v)
+                plt.xlabel('Voltage')
+            plt.plot(plot_x, values)
+            plt.plot(plot_x, sim)
             plt.ylabel('Current')
-            plt.xlabel('Time')
             plt.savefig('%s/rmsd-hist-%s-plot-%s.png'% (savepath, prt, n))
             plt.close('all')
             print('%s %s %s rmsd: '%(n, ID, CELL) + str(rmsd(sim, values)))
@@ -233,10 +290,15 @@ for i_temperature, (file_name, temperature) in enumerate(zip(file_list,
             ID, CELL = RMSD_cells[i][0], RMSD_cells[i][1]
             values = VALUES[i]
             sim = SIMS[i]
-            plt.plot(times, values)
-            plt.plot(times, sim)
+            if prt not in protocol_iv:
+                plot_x = np.copy(times)
+                plt.xlabel('Time')
+            else:
+                plot_x = np.copy(iv_v)
+                plt.xlabel('Voltage')
+            plt.plot(plot_x, values)
+            plt.plot(plot_x, sim)
             plt.ylabel('Current')
-            plt.xlabel('Time')
             plt.savefig('%s/rank_%s-%s-%s.png'%(savedir, str(ii).zfill(3), ID,\
                     CELL))
             plt.close('all')
@@ -282,6 +344,15 @@ for i_temperature, (file_name, temperature) in enumerate(zip(file_list,
     plt.close('all')
 
     #
+    # Save matrix
+    #
+    np.savetxt('%s/rmsd-matrix.txt' % savepath, BIG_MATRIX.T,
+            header=' '.join(protocol_list))
+    with open('%s/rmsd-matrix-cells.txt' % savepath, 'w') as f:
+        for c in RMSD_cells:
+            f.write(c + '\n')
+
+    #
     # Gary's plotmatrix type plot
     #
     fig, axes = plt.subplots(BIG_MATRIX.shape[0], BIG_MATRIX.shape[0],
@@ -304,13 +375,4 @@ for i_temperature, (file_name, temperature) in enumerate(zip(file_list,
     plt.savefig('%s/rmsd-gary-matrix.png' % savepath, bbox_inch='tight')
     plt.close('all')
 
-
-    #
-    # Save matrix
-    #
-    np.savetxt('%s/rmsd-matrix.txt' % savepath, BIG_MATRIX.T,
-            header=' '.join(protocol_list))
-    with open('%s/rmsd-matrix-cells.txt' % savepath, 'w') as f:
-        for c in RMSD_cells:
-            f.write(c + '\n')
 
