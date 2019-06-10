@@ -26,7 +26,7 @@ withfcap = False
 #
 # Define some parameters and labels
 #
-labels = [r'$g$', r'$p_1$', r'$p_2$', r'$p_3$', r'$p_4$',
+labels = [r'$g_{Kr}$', r'$p_1$', r'$p_2$', r'$p_3$', r'$p_4$',
           r'$p_5$', r'$p_6$', r'$p_7$', r'$p_8$']
 
 #
