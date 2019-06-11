@@ -791,11 +791,11 @@ def plot_posterior_predictive_distribution(samples,
                                          style='sci', 
                                          scilimits=(-1,1))
             if aj == 2 and ai == 1:
-                ax_marginal.set_ylabel('Probability density', 
+                ax_marginal.set_ylabel('Probability\ndensity', 
                                        color='#CC0000',
-                                       fontsize=16)
+                                       fontsize=15)
         else:
-            ax_marginal.set_ylabel('Probability density', color='#CC0000')
+            ax_marginal.set_ylabel('Probability\ndensity', color='#CC0000')
         ax_marginal.tick_params('y', colors='#CC0000')
     
     plt.tight_layout()
@@ -1186,7 +1186,7 @@ def change_labels_histogram_fold(axes, names):
     # assume 3x3 and goes to left first.
     for i in range(3):
         for j in range(3):
-            axes[i, j].set_xlabel(names[i*3 + j], fontsize=16)
+            axes[i, j].set_xlabel(names[i*3 + j], fontsize=14)
     return axes
 
 
@@ -1287,7 +1287,7 @@ def histogram_fold(samples,
             # Add histogram subplot
             axes[ai, aj].set_xlabel('Parameter ' + str(i + 1))
             if normalise:
-                axes[1, 0].set_ylabel('Normalised\nfrequency', fontsize=14)
+                axes[1, 0].set_ylabel('Normalised\nfrequency', fontsize=15)
             else:
                 axes[1, 0].set_ylabel('Frequency', fontsize=16)
             if n_percentiles is None:

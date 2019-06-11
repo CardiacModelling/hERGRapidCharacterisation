@@ -46,8 +46,9 @@ saveas = 'figs/pseudoHBM-manualv2selected-herg25oc1/'
 saveaslr = 'figs/pseudoHBM-manualv2selected-herg25oc1-low-res/'
 n_non_model_param = 1
 which_hyper_func = 1
-variable_names = [r'$g_{Kr}$', r'$p_1$', r'$p_2$', r'$p_3$', r'$p_4$',
-                  r'$p_5$', r'$p_6$', r'$p_7$', r'$p_8$', 'noise']
+variable_names = [r'$g_{Kr}$ $[pS]$', r'$p_1$ $[s^{-1}]$', r'$p_2$ $[V^{-1}]$',
+        r'$p_3$ $[s^{-1}]$', r'$p_4$ $[V^{-1}]$', r'$p_5$ $[s^{-1}]$',
+        r'$p_6$ $[V^{-1}]$', r'$p_7$ $[s^{-1}]$', r'$p_8$ $[V^{-1}]$', 'noise']
 
 if not os.path.isdir(os.path.dirname(saveas)):
     os.makedirs(os.path.dirname(saveas))
@@ -294,6 +295,10 @@ else:
     plt.savefig('%shbm-plot.png' % saveas, bbox_iches='tight', dpi=300)
     # plt.savefig('%s-fig4-5.pdf'%saveas, format='pdf', bbox_inches='tight')
 plt.close('all')
+
+
+# NOTE: Below function/plot has been moved to `paper-pseudohbm-cov.py`
+sys.exit()
 
 
 print('Plotting cov...')
