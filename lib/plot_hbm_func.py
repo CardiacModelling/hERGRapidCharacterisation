@@ -1145,11 +1145,13 @@ def change_labels_correlation_and_variable_covariance(axes, names):
         axes[i][i].ticklabel_format(axis='y', 
                                     style='sci', 
                                     scilimits=(-1,1))
+        '''
         for j in range(len(axes)):
             if i < j:
                 axes[i+1][j].set_title(names[i] + '-' + names[j], 
                                        loc='center', fontsize=30,
                                        color='#ff7f0e')
+        '''
     axes[0][0].set_ylabel('Probability\ndensity', fontsize=32,
                           color='#2ca02c')
     return axes

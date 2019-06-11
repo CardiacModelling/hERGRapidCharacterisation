@@ -43,8 +43,9 @@ saveas = 'figs/paper/'
 saveaslr = 'figs/paper-low-res/'
 n_non_model_param = 1
 which_hyper_func = 1
-variable_names = [r'$g_{Kr}$', r'$p_1$', r'$p_2$', r'$p_3$', r'$p_4$',
-                  r'$p_5$', r'$p_6$', r'$p_7$', r'$p_8$', 'noise']
+variable_names = [r'$\ln(g_{Kr})$', r'$\ln(p_1)$', r'$\ln(p_2)$',
+        r'$\ln(p_3)$', r'$\ln(p_4)$', r'$\ln(p_5)$', r'$\ln(p_6)$',
+        r'$\ln(p_7)$', r'$\ln(p_8)$', 'noise']
 
 if not os.path.isdir(os.path.dirname(saveas)):
     os.makedirs(os.path.dirname(saveas))
