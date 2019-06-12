@@ -31,30 +31,35 @@ chain_final = simple_chain_final[(n_samples // 3):n_samples:thinning, :]
 cov_chain_final = simple_cov_final[(n_samples // 3):n_samples:thinning, :, :]
 assert(len(chain_final) == len(cov_chain_final))
 
-# Detransform
-detransform_cov_chain_final = np.zeros(cov_chain_final.shape)
-for i, (m, s) in enumerate(zip(chain_final, cov_chain_final)):
-    tm = transform_to_model_param(m)
-    detransform_cov_chain_final[i, :, :] = np.outer(tm, tm) * s
-
 # Hyperparameters standard deviation
-chain_stddev = np.sqrt(detransform_cov_chain_final.diagonal(0, 1, 2))
+chain_stddev = np.sqrt(cov_chain_final.diagonal(0, 1, 2))
 assert(len(chain_final) == len(chain_stddev))
 
 # Correlation matrice
-simple_cor_final = np.zeros(detransform_cov_chain_final.shape)
-for i, s in enumerate(detransform_cov_chain_final):
+simple_cor_final = np.zeros(cov_chain_final.shape)
+for i, s in enumerate(cov_chain_final):
     D = np.sqrt(np.diag(s))
     c = s / D / D[:, None]
     simple_cor_final[i, :, :] = c[:, :]
 
 # Take mean
 mean_mean = np.mean(chain_final, axis=0)
+std_mean = np.std(chain_final, axis=0)
 mean_std = np.mean(chain_stddev, axis=0)
-mean_cor = np.mean(simple_cor_final, axis=0)
+mean_cor = np.mean(simple_cor_final, axis=0)  # invariant
 
-# Detransform (mean-log)
+# Calculate first std
+std_mean_plus = mean_mean + 2*std_mean
+std_mean_minus = mean_mean - 2*std_mean
+mean_std_plus = mean_mean + 2*mean_std
+mean_std_minus = mean_mean - 2*mean_std
+
+# Detransform
 mean_mean = transform_to_model_param(mean_mean)
+std_mean_plus = transform_to_model_param(std_mean_plus)
+std_mean_minus = transform_to_model_param(std_mean_minus)
+mean_std_plus = transform_to_model_param(mean_std_plus)
+mean_std_minus = transform_to_model_param(mean_std_minus)
 
 
 # Make TeX table
@@ -65,14 +70,34 @@ for (v, u) in zip(variable_names[:-1], variable_unit[:-1]):
     tex_table += ' & ' + v + ' ' + u
 tex_table += ' \\\\\n'
 
+tex_table += '\\midrule\n'
+tex_table += '\\midrule\n'
 tex_table += 'mean '
 for v in mean_mean:
     tex_table += ' & ' \
             + np.format_float_scientific(v, precision=2, exp_digits=1)
 tex_table += ' \\\\\n'
 
-tex_table += r'$\sigma$ '
-for v in mean_std:
+tex_table += '\\midrule\n'
+tex_table += r'\multirow{2}{*}{95\textsuperscript{th} \%ile (mean)} '
+for v in std_mean_minus:
+    tex_table += ' & ' \
+            + np.format_float_scientific(v, precision=2, exp_digits=1)
+tex_table += ' \\\\\n'
+tex_table += ' '
+for v in std_mean_plus:
+    tex_table += ' & ' \
+            + np.format_float_scientific(v, precision=2, exp_digits=1)
+tex_table += ' \\\\\n'
+
+tex_table += '\\midrule\n'
+tex_table += r'\multirow{2}{*}{95\textsuperscript{th} \%ile (exp)} '
+for v in mean_std_minus:
+    tex_table += ' & ' \
+            + np.format_float_scientific(v, precision=2, exp_digits=1)
+tex_table += ' \\\\\n'
+tex_table += ' '
+for v in mean_std_plus:
     tex_table += ' & ' \
             + np.format_float_scientific(v, precision=2, exp_digits=1)
 tex_table += ' \\\\\n'
