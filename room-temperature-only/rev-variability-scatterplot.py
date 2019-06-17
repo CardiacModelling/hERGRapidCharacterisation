@@ -191,8 +191,10 @@ for i in range(n_param):
         axes[-1, i].tick_params('x', labelsize=26, rotation=30)
 
 
-axes[1, 0].legend(fontsize=32, loc="lower left", bbox_to_anchor=(1.15, 1.15),
-                  bbox_transform=axes[1, 0].transAxes)
+handles, labels = axes[1, 0].get_legend_handles_labels()
+fig.legend(handles, labels, fontsize=32, loc='lower left',
+        bbox_to_anchor=(1.15, 1.15),
+        bbox_transform=axes[1, 0].transAxes)
 
 plt.tight_layout(pad=0.4, w_pad=0.5, h_pad=1.0)
 # plt.savefig('%scov-plot-3.png' % saveas, bbox_inch='tight', dpi=300)
