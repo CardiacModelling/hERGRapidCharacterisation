@@ -1,0 +1,359 @@
+<?xml version='1.0'?>
+<model name="Lei_2019_37C_IKr" xmlns="http://www.cellml.org/cellml/1.0#" xmlns:cellml="http://www.cellml.org/cellml/1.0#" xmlns:cmeta="http://www.cellml.org/metadata/1.0#">
+    <units name="ms">
+        <unit exponent="1" multiplier="0.001" units="second"/>
+    </units>
+    <units name="per_mV">
+        <unit exponent="-1" units="gram"/>
+        <unit exponent="-2" units="metre"/>
+        <unit exponent="3" units="second"/>
+        <unit exponent="1" units="ampere"/>
+    </units>
+    <units name="nA">
+        <unit exponent="1" multiplier="1e-09" units="ampere"/>
+    </units>
+    <units name="per_ms">
+        <unit exponent="-1" multiplier="1000.0" units="second"/>
+    </units>
+    <units name="uS">
+        <unit exponent="-1" multiplier="1e-09" units="gram"/>
+        <unit exponent="-2" units="metre"/>
+        <unit exponent="3" units="second"/>
+        <unit exponent="2" units="ampere"/>
+    </units>
+    <units name="mV">
+        <unit exponent="1" units="gram"/>
+        <unit exponent="2" units="metre"/>
+        <unit exponent="-3" units="second"/>
+        <unit exponent="-1" units="ampere"/>
+    </units>
+    <component name="environment">
+        <variable cmeta:id="time" name="time" public_interface="out" units="ms"/>
+    </component>
+    <component name="membrane">
+        <variable cmeta:id="membrane_voltage" initial_value="-80.0" name="V" public_interface="out" units="mV"/>
+    </component>
+    <component name="nernst">
+        <variable cmeta:id="potassium_reversal_potential" initial_value="-85.0" name="EK" public_interface="out" units="mV"/>
+    </component>
+    <component name="ikr">
+        <variable cmeta:id="membrane_rapid_delayed_rectifier_potassium_current" name="IKr" units="nA"/>
+        <variable initial_value="0.0" name="y1" units="dimensionless"/>
+        <variable initial_value="0.0" name="y2" units="dimensionless"/>
+        <variable initial_value="0.0" name="y3" units="dimensionless"/>
+        <variable name="y4" units="dimensionless"/>
+        <variable name="k14" units="per_ms"/>
+        <variable name="k21" units="per_ms"/>
+        <variable name="k41" units="per_ms"/>
+        <variable name="k12" units="per_ms"/>
+        <variable cmeta:id="rapid_delayed_rectifier_potassium_channel_kO1" initial_value="2.06469371e-03" name="p1" units="per_ms"/>
+        <variable cmeta:id="rapid_delayed_rectifier_potassium_channel_kO2" initial_value="7.17061646e-02" name="p2" units="per_mV"/>
+        <variable cmeta:id="rapid_delayed_rectifier_potassium_channel_kC1" initial_value="3.44186257e-05" name="p3" units="per_ms"/>
+        <variable cmeta:id="rapid_delayed_rectifier_potassium_channel_kC2" initial_value="6.17661788e-02" name="p4" units="per_mV"/>
+        <variable cmeta:id="rapid_delayed_rectifier_potassium_channel_kI1" initial_value="4.17809103e-01" name="p5" units="per_ms"/>
+        <variable cmeta:id="rapid_delayed_rectifier_potassium_channel_kI2" initial_value="2.57733544e-02" name="p6" units="per_mV"/>
+        <variable cmeta:id="rapid_delayed_rectifier_potassium_channel_kA1" initial_value="4.75152441e-02" name="p7" units="per_ms"/>
+        <variable cmeta:id="rapid_delayed_rectifier_potassium_channel_kA2" initial_value="2.50856878e-02" name="p8" units="per_mV"/>
+        <variable cmeta:id="membrane_rapid_delayed_rectifier_potassium_current_conductance" initial_value="0.1524" name="p9" units="uS"/>
+        <variable name="time" public_interface="in" units="ms"/>
+        <variable name="V" public_interface="in" units="mV"/>
+        <variable name="EK" public_interface="in" units="mV"/>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+                <eq/>
+                <ci>IKr</ci>
+                <apply>
+                    <times/>
+                    <ci>p9</ci>
+                    <ci>y3</ci>
+                    <apply>
+                        <minus/>
+                        <ci>V</ci>
+                        <ci>EK</ci>
+                    </apply>
+                </apply>
+            </apply>
+            <apply>
+                <eq/>
+                <ci>k14</ci>
+                <apply>
+                    <times/>
+                    <ci>p7</ci>
+                    <apply>
+                        <exp/>
+                        <apply>
+                            <times/>
+                            <apply>
+                                <minus/>
+                                <ci>p8</ci>
+                            </apply>
+                            <ci>V</ci>
+                        </apply>
+                    </apply>
+                </apply>
+            </apply>
+            <apply>
+                <eq/>
+                <ci>k21</ci>
+                <apply>
+                    <times/>
+                    <ci>p3</ci>
+                    <apply>
+                        <exp/>
+                        <apply>
+                            <times/>
+                            <apply>
+                                <minus/>
+                                <ci>p4</ci>
+                            </apply>
+                            <ci>V</ci>
+                        </apply>
+                    </apply>
+                </apply>
+            </apply>
+            <apply>
+                <eq/>
+                <ci>k41</ci>
+                <apply>
+                    <times/>
+                    <ci>p5</ci>
+                    <apply>
+                        <exp/>
+                        <apply>
+                            <times/>
+                            <ci>p6</ci>
+                            <ci>V</ci>
+                        </apply>
+                    </apply>
+                </apply>
+            </apply>
+            <apply>
+                <eq/>
+                <ci>y4</ci>
+                <apply>
+                    <minus/>
+                    <apply>
+                        <minus/>
+                        <apply>
+                            <minus/>
+                            <cn cellml:units="dimensionless">1.0</cn>
+                            <ci>y1</ci>
+                        </apply>
+                        <ci>y2</ci>
+                    </apply>
+                    <ci>y3</ci>
+                </apply>
+            </apply>
+            <apply>
+                <eq/>
+                <apply>
+                    <diff/>
+                    <bvar>
+                        <ci>time</ci>
+                    </bvar>
+                    <ci>y1</ci>
+                </apply>
+                <apply>
+                    <minus/>
+                    <apply>
+                        <plus/>
+                        <apply>
+                            <times/>
+                            <apply>
+                                <minus/>
+                                <ci>k12</ci>
+                            </apply>
+                            <ci>y1</ci>
+                        </apply>
+                        <apply>
+                            <times/>
+                            <ci>k21</ci>
+                            <ci>y2</ci>
+                        </apply>
+                        <apply>
+                            <times/>
+                            <ci>k41</ci>
+                            <ci>y4</ci>
+                        </apply>
+                    </apply>
+                    <apply>
+                        <times/>
+                        <ci>k14</ci>
+                        <ci>y1</ci>
+                    </apply>
+                </apply>
+            </apply>
+            <apply>
+                <eq/>
+                <apply>
+                    <diff/>
+                    <bvar>
+                        <ci>time</ci>
+                    </bvar>
+                    <ci>y3</ci>
+                </apply>
+                <apply>
+                    <minus/>
+                    <apply>
+                        <plus/>
+                        <apply>
+                            <times/>
+                            <apply>
+                                <minus/>
+                                <ci>k21</ci>
+                            </apply>
+                            <ci>y3</ci>
+                        </apply>
+                        <apply>
+                            <times/>
+                            <ci>k12</ci>
+                            <ci>y4</ci>
+                        </apply>
+                        <apply>
+                            <times/>
+                            <ci>k14</ci>
+                            <ci>y2</ci>
+                        </apply>
+                    </apply>
+                    <apply>
+                        <times/>
+                        <ci>k41</ci>
+                        <ci>y3</ci>
+                    </apply>
+                </apply>
+            </apply>
+            <apply>
+                <eq/>
+                <apply>
+                    <diff/>
+                    <bvar>
+                        <ci>time</ci>
+                    </bvar>
+                    <ci>y2</ci>
+                </apply>
+                <apply>
+                    <minus/>
+                    <apply>
+                        <plus/>
+                        <apply>
+                            <times/>
+                            <apply>
+                                <minus/>
+                                <ci>k14</ci>
+                            </apply>
+                            <ci>y2</ci>
+                        </apply>
+                        <apply>
+                            <times/>
+                            <ci>k41</ci>
+                            <ci>y3</ci>
+                        </apply>
+                        <apply>
+                            <times/>
+                            <ci>k12</ci>
+                            <ci>y1</ci>
+                        </apply>
+                    </apply>
+                    <apply>
+                        <times/>
+                        <ci>k21</ci>
+                        <ci>y2</ci>
+                    </apply>
+                </apply>
+            </apply>
+            <apply>
+                <eq/>
+                <ci>k12</ci>
+                <apply>
+                    <times/>
+                    <ci>p1</ci>
+                    <apply>
+                        <exp/>
+                        <apply>
+                            <times/>
+                            <ci>p2</ci>
+                            <ci>V</ci>
+                        </apply>
+                    </apply>
+                </apply>
+            </apply>
+        </math>
+    </component>
+    <connection>
+        <map_components component_1="environment" component_2="ikr"/>
+        <map_variables variable_1="time" variable_2="time"/>
+    </connection>
+    <connection>
+        <map_components component_1="ikr" component_2="membrane"/>
+        <map_variables variable_1="V" variable_2="V"/>
+    </connection>
+    <connection>
+        <map_components component_1="ikr" component_2="nernst"/>
+        <map_variables variable_1="EK" variable_2="EK"/>
+    </connection>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#time">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="https://chaste.comlab.ox.ac.uk/cellml/ns/oxford-metadata#time" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#membrane_voltage">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="https://chaste.comlab.ox.ac.uk/cellml/ns/oxford-metadata#membrane_voltage" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#potassium_reversal_potential">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="https://chaste.comlab.ox.ac.uk/cellml/ns/oxford-metadata#potassium_reversal_potential" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#membrane_rapid_delayed_rectifier_potassium_current">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="https://chaste.comlab.ox.ac.uk/cellml/ns/oxford-metadata#membrane_rapid_delayed_rectifier_potassium_current" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#rapid_delayed_rectifier_potassium_channel_kO1">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="herg:params#rapid_delayed_rectifier_potassium_channel_kO1" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#rapid_delayed_rectifier_potassium_channel_kO2">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="herg:params#rapid_delayed_rectifier_potassium_channel_kO2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#rapid_delayed_rectifier_potassium_channel_kC1">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="herg:params#rapid_delayed_rectifier_potassium_channel_kC1" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#rapid_delayed_rectifier_potassium_channel_kC2">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="herg:params#rapid_delayed_rectifier_potassium_channel_kC2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#rapid_delayed_rectifier_potassium_channel_kI1">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="herg:params#rapid_delayed_rectifier_potassium_channel_kI1" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#rapid_delayed_rectifier_potassium_channel_kI2">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="herg:params#rapid_delayed_rectifier_potassium_channel_kI2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#rapid_delayed_rectifier_potassium_channel_kA1">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="herg:params#rapid_delayed_rectifier_potassium_channel_kA1" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#rapid_delayed_rectifier_potassium_channel_kA2">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="herg:params#rapid_delayed_rectifier_potassium_channel_kA2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+        <rdf:Description xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" rdf:about="#membrane_rapid_delayed_rectifier_potassium_current_conductance">
+            <bqbiol:is xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" rdf:resource="https://chaste.comlab.ox.ac.uk/cellml/ns/oxford-metadata#membrane_rapid_delayed_rectifier_potassium_current_conductance" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+        </rdf:Description>
+    </rdf:RDF>
+</model>

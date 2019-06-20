@@ -8,6 +8,7 @@ This repository contains all data, code and figures for the papers "*Rapid chara
 [room-temperature-only](./room-temperature-only): Results of "*Rapid characterisation of hERG channel kinetics I: using an automated high-throughput system*".
 
 [temperature-dependency](./temperature-dependency): Results of "*Rapid characterisation of hERG channel kinetics II: temperature dependence*".
+                                                    The hierarchical Bayesian mean model for 37&deg;C is also available as a [CellML file](./lei_2019_37C.cellml).
 
 [syn-room-temperature-only](./syn-room-temperature-only): Synthetic data studies supporting "*Rapid characterisation of hERG channel kinetics I: using an automated high-throughput system*".
 
