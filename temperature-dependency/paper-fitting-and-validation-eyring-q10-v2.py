@@ -681,5 +681,7 @@ plt.savefig('%s/fitting-and-validation-eyring-q10-%s-v2.png' % (savedirlr,
             prt), bbox_inch='tight', pad_inches=0, dpi=300)
 plt.savefig('%s/fitting-and-validation-eyring-q10-%s-v2.png' % (savedir, prt),
             bbox_inch='tight', pad_inches=0, dpi=500)
+plt.savefig('%s/fitting-and-validation-eyring-q10-%s-v2.pdf' % (savedir, prt),
+            format='pdf', bbox_inch='tight', pad_inches=0)
 
 print('Done')

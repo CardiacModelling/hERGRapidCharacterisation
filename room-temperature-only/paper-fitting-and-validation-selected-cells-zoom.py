@@ -585,7 +585,7 @@ plt.savefig('%s/fitting-and-validation-selected-cells-zoom.png' % savedirlr,
 plt.savefig('%s/fitting-and-validation-selected-cells-zoom.png' % savedir,
             bbox_inch='tight', pad_inches=0, dpi=300)
 # This pdf version can get up to 40+MB!
-# plt.savefig('%s/fitting-and-validation-selected-cells-zoom.pdf' % savedir,
-#             format='pdf', bbox_inch='tight', pad_inches=0)
+plt.savefig('%s/fitting-and-validation-selected-cells-zoom.pdf' % savedir,
+            format='pdf', bbox_inch='tight', pad_inches=0)
 
 print('Done')

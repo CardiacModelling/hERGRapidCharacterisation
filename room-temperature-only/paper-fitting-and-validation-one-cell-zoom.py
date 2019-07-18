@@ -477,7 +477,7 @@ plt.savefig('%s/fitting-and-validation-%s_%s-zoom.png' % (savedirlr, \
             file_name, cell), bbox_inch='tight', pad_inches=0, dpi=100)
 plt.savefig('%s/fitting-and-validation-%s_%s-zoom.png' % (savedir, file_name, \
             cell), bbox_inch='tight', pad_inches=0, dpi=300)
-# plt.savefig('%s/fitting-and-validation-%s_%s-zoom.pdf' % (savedir, \
-#             file_name, cell), format='pdf', bbox_inch='tight', pad_inches=0)
+plt.savefig('%s/fitting-and-validation-%s_%s-zoom.pdf' % (savedir, file_name, \
+            cell), format='pdf', bbox_inch='tight', pad_inches=0)
 
 print('Done')

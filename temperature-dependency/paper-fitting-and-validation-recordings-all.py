@@ -375,7 +375,7 @@ for i_prt, prt in enumerate(protocol_list):
             if prt not in protocol_iv:
                 axes[ai, aj].plot(times, data / norm_data, 
                                 lw=0.2, alpha=0.1,
-                                c=colour_list[i_CELL])
+                                c=colour_list[i_CELL], rasterized=True)
             else:
                 iv_i = protocols.get_corrected_iv(data, times,
                                                   *protocol_iv_args[prt]())
@@ -388,7 +388,7 @@ for i_prt, prt in enumerate(protocol_list):
                 if prt in add_inset.keys():  # not in provtocol_iv
                     axins[ai, aj].plot(times, data / norm_data, 
                                     lw=0.2, alpha=0.1,
-                                    c=colour_list[i_CELL])
+                                    c=colour_list[i_CELL], rasterized=True)
 
 
 #
@@ -400,7 +400,7 @@ plt.savefig('%s/fitting-and-validation-recordings-all.png' % savedirlr,
             bbox_inch='tight', pad_inches=0, dpi=100)
 plt.savefig('%s/fitting-and-validation-recordings-all.png' % savedir,
             bbox_inch='tight', pad_inches=0, dpi=300)
-# plt.savefig('%s/fitting-and-validation-recordings.pdf' % savedir,
-#             format='pdf', bbox_inch='tight', pad_inches=0)
+plt.savefig('%s/fitting-and-validation-recordings-all.pdf' % savedir,
+            format='pdf', bbox_inch='tight', pad_inches=0, dpi=300)
 
 print('Done')

@@ -365,5 +365,7 @@ grid.tight_layout(fig, pad=0.6, rect=(0.02, 0.0, 1, 0.99))
 grid.update(wspace=0.2, hspace=0.0)
 plt.savefig('%s/rmsd-hist.png' % (savedir), bbox_inch='tight', pad_inches=0,
             dpi=300)
+plt.savefig('%s/rmsd-hist.pdf' % (savedir), format='pdf', bbox_inch='tight',
+            pad_inches=0)
 
 print('Done')

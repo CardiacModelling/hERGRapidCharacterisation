@@ -423,19 +423,19 @@ for i_prt, prt in enumerate(protocol_list):
         if prt not in protocol_iv:
             axes[ai, aj].plot(times, data / norm, 
                             lw=0.2, alpha=0.1,
-                            c=colour_list[i_CELL])
+                            c=colour_list[i_CELL], rasterized=True)
         else:
             iv_i = protocols.get_corrected_iv(data, times,
                                               *protocol_iv_args[prt]())
             iv_v = protocol_iv_v[prt]() * 1000  # mV
             axes[ai, aj].plot(iv_v, iv_i / np.max(iv_i), lw=0.5, alpha=0.5,
-                              c=colour_list[i_CELL])
+                              c=colour_list[i_CELL], rasterized=True)
 
         # Plot inset
         if prt in add_inset.keys():  # not in provtocol_iv
             axins[ai, aj].plot(times, data / norm, 
                             lw=0.2, alpha=0.1,
-                            c=colour_list[i_CELL])
+                            c=colour_list[i_CELL], rasterized=True)
 
 
 #
@@ -447,7 +447,7 @@ plt.savefig('%s/fitting-and-validation-recordings-samey.png' % savedirlr,
             bbox_inch='tight', pad_inches=0, dpi=100)
 plt.savefig('%s/fitting-and-validation-recordings-samey.png' % savedir,
             bbox_inch='tight', pad_inches=0, dpi=300)
-# plt.savefig('%s/fitting-and-validation-recordings.pdf' % savedir,
-#             format='pdf', bbox_inch='tight', pad_inches=0)
+plt.savefig('%s/fitting-and-validation-recordings-samey.pdf' % savedir,
+            format='pdf', bbox_inch='tight', pad_inches=0, dpi=300)
 
 print('Done')
