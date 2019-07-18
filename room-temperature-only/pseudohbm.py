@@ -293,7 +293,7 @@ if '--show' in sys.argv:
 else:
     plt.savefig('%shbm-plot.png' % saveaslr, bbox_iches='tight', dpi=100)
     plt.savefig('%shbm-plot.png' % saveas, bbox_iches='tight', dpi=300)
-    # plt.savefig('%s-fig4-5.pdf'%saveas, format='pdf', bbox_inches='tight')
+    plt.savefig('%shbm-plot.pdf' % saveas, format='pdf', bbox_inches='tight')
 plt.close('all')
 
 
