@@ -1,6 +1,6 @@
 # Rapid characterisation of hERG channel kinetics
 
-This repository contains all data, code and figures for the papers "*Rapid characterisation of hERG channel kinetics I: using an automated high-throughput system*" and "*Rapid characterisation of hERG channel kinetics II: temperature dependence*".
+This repository contains all data, code and figures for the papers "[*Rapid characterisation of hERG channel kinetics I: using an automated high-throughput system*](https://doi.org/10.1016/j.bpj.2019.07.029)" and "[*Rapid characterisation of hERG channel kinetics II: temperature dependence*](https://doi.org/10.1016/j.bpj.2019.07.030)".
 
 
 ### Main results
@@ -46,10 +46,10 @@ If you publish any work based on the contents of this repository please cite:
 
 Lei, C. L., Clerx, M., Gavaghan, D. J., Polonchuk, L., Mirams, G. R., Wang, K.
 (2019).
-[Rapid characterisation of hERG channel kinetics I: using an automated high-throughput system](https://doi.org/10.1101/609727).
-_bioRxiv_, 609727.
+[Rapid characterisation of hERG channel kinetics I: using an automated high-throughput system](https://doi.org/10.1016/j.bpj.2019.07.029).
+_Biophysical Journal_, 117:(in press).
 
 Lei, C. L., Clerx, M., Beattie, K. A., Melgari, D., Hancox, J., Gavaghan, D. J., Polonchuk, L., Wang, K., Mirams, G. R.
 (2019).
-[Rapid characterisation of hERG channel kinetics II: temperature dependence](https://doi.org/10.1101/609719).
-_bioRxiv_, 609719.
+[Rapid characterisation of hERG channel kinetics II: temperature dependence](https://doi.org/10.1016/j.bpj.2019.07.030).
+_Biophysical Journal_, 117:(in press).
