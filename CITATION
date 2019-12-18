@@ -1,0 +1,41 @@
+To cite this work, please use:
+
+[1]
+
+Lei, C. L., Clerx, M., Gavaghan, D. J., Polonchuk, L., Mirams, G. R., & Wang, K. (2019).
+Rapid characterisation of hERG channel kinetics I: using an automated high-throughput system.
+Biophysical Journal, 117, 2438-2454.
+
+https://doi.org/10.1016/j.bpj.2019.07.029
+
+[2]
+
+Lei, C. L., Clerx, M., Beattie, K. A., Melgari, D., Hancox, J., Gavaghan, D. J., Polonchuk, L., Wang, K., & Mirams, G. R. (2019).
+Rapid characterisation of hERG channel kinetics II: temperature dependence.
+Biophysical Journal, 117, 2455-2470.
+
+https://doi.org/10.1016/j.bpj.2019.07.030
+
+
+BibTeX entries for LaTeX users:
+
+@article{Lei2019RapidCharacterisation,
+  title={Rapid characterisation of hERG channel kinetics I: using an automated high-throughput system},
+  author={Lei, Chon Lok and Clerx, Michael and Gavaghan, David J. and Polonchuk, Liudmila and Mirams, Gary R. and Wang, Ken},
+  journal={Biophyical Journal},
+  year={2019},
+  volume={117},
+  pages={2438--2454},
+  doi={10.1016/j.bpj.2019.07.029}
+}
+
+@article{Lei2019Temperature,
+  title={Rapid characterisation of hERG channel kinetics II: temperature dependence},
+  author={Lei, Chon Lok and Clerx, Michael and Beattie, Kylie A. and Melgari, Dario and Hancox, Jules C. and Gavaghan, David J. and Polonchuk, Liudmila and Wang, Ken and Mirams, Gary R.},
+  journal={Biophyical Journal},
+  year={2019},
+  volume={117},
+  pages={2455--2470},
+  doi={10.1016/j.bpj.2019.07.030}
+}
+
